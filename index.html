@@ -1,0 +1,534 @@
+
+<!doctype html>
+
+<html lang="ru">
+
+<head>
+    <meta charset="cp-1251">
+
+    <title>Независимая экспертиза</title>
+    <meta name="description" content="DTP Landing">
+    <meta name="author" content="DTP Landing">
+
+    <link rel="stylesheet" href="src/css/fonts.css">
+    <link rel="stylesheet" href="public/css/styles.css">
+
+</head>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter41560514 = new Ya.Metrika({
+                    id:41560514,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true,
+                    webvisor:true,
+                    trackHash:true
+                });
+            } catch(e) { }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/41560514" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+<body>
+    <div class="main">
+        <header class="header">
+            <section class="header-inner content">
+                <section class="header__top-bar">
+                    <div class="top-bar__logo">
+                        <img src="public/images/logo.png" class="top-bar__logo-img" />
+                    </div>
+                    <div class="top-bar__contacts">
+                        <div class="top-bar__contacts-phone">
+                            <img src="public/images/phone-icon.png" class="contacts-phone__icon" />
+                            <span class="contacts-phone__text">8 800 770 70 52</span>
+                        </div>
+                        <div class="top-bar__contacts-days">
+                            <span class="contacts-days__text">
+                              Пн-Пт 09:00 | 19:30
+                            </span>
+                        </div>
+                        <div class="top-bar__contacts-email">
+                            <img src="public/images/email-icon.png" class="contacts-email__icon" />
+                            <span class="contacts-email__text">
+                              info@dtp-help.ru
+                            </span>
+                        </div>
+                    </div>
+                </section>
+                <section class="header__main">
+                    <div class="header__main-left">
+                        <div class="header__main-slider">
+                            <div class="header__slides-inner">
+                                <div class="main-slider__item" id="main-slider__item-1">
+                                    <span class="main-slider__item-cost">
+                                      <span class="main-slider__item-cost-text">
+                                      Сумма ущерба 360 000 <span class="lower-case">руб.</span>
+                                    </span>
+                                    </span>
+                                </div>
+                                <div class="main-slider__item" id="main-slider__item-2">
+                                    <span class="main-slider__item-cost">
+                                      <span class="main-slider__item-cost-text">
+                                      Сумма ущерба 101 138 <span class="lower-case">руб.</span>
+                                    </span>
+                                    </span>
+                                </div>
+                                <div class="main-slider__item" id="main-slider__item-3">
+                                    <span class="main-slider__item-cost">
+                                      <span class="main-slider__item-cost-text">
+                                      Сумма ущерба 75 359 <span class="lower-case">руб.</span>
+                                    </span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="main-slider__controls">
+                                <span class="main-slider__control-item main-slider__control-item--current"></span>
+                                <span class="main-slider__control-item"></span>
+                                <span class="main-slider__control-item"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="header__main-right">
+                        <div class="header__main-expertize">
+                            <div class="main-expertize__cost">
+                                Экспертиза 7000 руб.
+                            </div>
+                            <div class="main-expertize__desc">
+                                Бесплатный предрасчет!
+                            </div>
+                        </div>
+                        <form class="main__callback-form" method="post" action="src/mail/index.php">
+                            <div class="callback-form__title">
+                                Форма связи
+                            </div>
+                            <input name="email" type="text" placeholder="Ваша почта" class="callback-form__input callback-form__input-email" required="required" />
+                            <input name="phone" type="text" placeholder="Ваш телефон" class="callback-form__input callback-form__input-phone" required="required" />
+                            <button type="button" class="callback-form__submit">Оформить заявку</button>
+                        </form>
+                    </div>
+                </section>
+                <section class="header__desc">
+                    <div class="header__desc-text">
+                        Деньги, потраченные на наши услуги будут возвращены в полном объеме вашим <br /> ответчиком (страховой компанией, виновником аварии, РСА) на основании ст. 98 ГПК РФ.
+                    </div>
+                </section>
+            </section>
+        </header>
+        <section class="try-free">
+            <section class="try-free-inner content">
+                <div class="try-free__title">
+                    Попробуйте БЕСПЛАТНО, прежде чем платить
+                    <span class="float-arrow"></span>
+                </div>
+                <div class="try-free__content">
+                    <div class="try-free__content-left">
+                        <button type="button" class="button-try">Заказать расчет</button>
+                    </div>
+                    <div class="try-free__content-right"></div>
+                    <div class="try-free__list">
+                        <div class="try-free__list-item">Получите тот же результат, как при оплате</div>
+                        <div class="try-free__list-item">Не нужно тратить деньги, не зная результата</div>
+                        <div class="try-free__list-item">Если расчет не устроит, мы отнесемся к этому с пониманием</div>
+                    </div>
+                </div>
+            </section>
+        </section>
+        <section class="why-us">
+            <section class="why-us-inner content">
+                <section class="why-us__content">
+                    <div class="why-us__left">
+                        <div class="why-us__header">
+                            Что Вы получите
+                        </div>
+                        <div class="why-us__list">
+                            <div class="why-us__list-item">
+                                <span class="why-us__list-item-icon">
+                                  <div class="why-us__list-item-icon-inner">
+                                    <img src="public/images/icon_1.png" />
+                                  </div>
+                                </span>
+                                <span class="why-us__list-item-text">
+                                  Оценку ущерба сумма с износом и без
+                                </span>
+                            </div>
+                            <div class="why-us__list-item">
+                                <span class="why-us__list-item-icon">
+                                  <div class="why-us__list-item-icon-inner">
+                                    <img src="public/images/icon_2.png" />
+                                  </div>
+                                </span>
+                                <span class="why-us__list-item-text">
+                                  Акт осмотра автомобиля
+                                </span>
+                            </div>
+                            <div class="why-us__list-item">
+                                <span class="why-us__list-item-icon">
+                                  <div class="why-us__list-item-icon-inner">
+                                    <img src="public/images/icon_3.png" />
+                                  </div>
+                                </span>
+                                <span class="why-us__list-item-text">
+                                  Фотографии повреждения
+                                </span>
+                            </div>
+                            <div class="why-us__list-item">
+                                <span class="why-us__list-item-icon">
+                                  <div class="why-us__list-item-icon-inner">
+                                    <img src="public/images/icon_4.png" />
+                                  </div>
+                                </span>
+                                <span class="why-us__list-item-text">
+                                  Наши сертификаты и свидетельства
+                                </span>
+                            </div>
+                            <div class="why-us__list-item">
+                                <span class="why-us__list-item-icon">
+                                  <div class="why-us__list-item-icon-inner">
+                                    <img src="public/images/icon_5.png" />
+                                  </div>
+                                </span>
+                                <span class="why-us__list-item-text">
+                                  Телеграмма за наш счет
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="why-us__right">
+                        <div class="why-us__header">
+                            Почему мы
+                        </div>
+                        <div class="why-us__list">
+                            <div class="why-us__list-item">
+                                <span class="why-us__list-item-icon">
+                                  <div class="why-us__list-item-icon-inner">
+                                    <img src="public/images/icon_6.png" />
+                                  </div>
+                                </span>
+                                <span class="why-us__list-item-text">
+                                  Рассчитываем по максимуму
+                                </span>
+                            </div>
+                            <div class="why-us__list-item">
+                                <span class="why-us__list-item-icon">
+                                  <div class="why-us__list-item-icon-inner">
+                                    <img src="public/images/icon_7.png" />
+                                  </div>
+                                </span>
+                                <span class="why-us__list-item-text">
+                                  Эксперт выезжает к вам
+                                </span>
+                            </div>
+                            <div class="why-us__list-item">
+                                <span class="why-us__list-item-icon">
+                                  <div class="why-us__list-item-icon-inner">
+                                    <img src="public/images/icon_8.png" />
+                                  </div>
+                                </span>
+                                <span class="why-us__list-item-text">
+                                  Бесплатный предрасчет
+                                </span>
+                            </div>
+                            <div class="why-us__list-item">
+                                <span class="why-us__list-item-icon">
+                                  <div class="why-us__list-item-icon-inner">
+                                    <img src="public/images/icon_9.png" />
+                                  </div>
+                                </span>
+                                <span class="why-us__list-item-text">
+                                  Короткие сроки
+                                </span>
+                            </div>
+                            <div class="why-us__list-item">
+                                <span class="why-us__list-item-icon">
+                                  <div class="why-us__list-item-icon-inner">
+                                    <img src="public/images/icon_10.png" />
+                                  </div>
+                                </span>
+                                <span class="why-us__list-item-text">
+                                  Опыт более 10 лет
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <div class="why-us__button-holder">
+                    <button class="why-us__button">Получить экспертизу</button>
+                </div>
+            </section>
+        </section>
+        <section class="parthners">
+          <section class="parthners-inner content">
+            <div class="parthners__title">
+              Наши партнеры
+            </div>
+            <div class="parthners__logos">
+              <div class="parthners__logo-item">
+                <img src="public/images/p_1.png" />
+              </div>
+              <div class="parthners__logo-item">
+                <img src="public/images/p_2.png" />
+              </div>
+              <div class="parthners__logo-item">
+                <img src="public/images/p_3.png" />
+              </div>
+            </div>
+            <div class="parthners__description">
+              Компания основана в 2004 году, специализируется на правовой помощи юридическим и физическим лицам, при спорах со страховыми компаниями. Более 10 филиалов по России.
+            </div>
+          </section>
+        </section>
+        <section class="sertificate">
+            <section class="sertificate-inner content">
+              <div class="sertificate__title">
+                Сертификаты
+              </div>
+              <div class="sertificate__logos">
+                <div class="sertificate__logo-item">
+                  <img src="public/images/img12.jpg" />
+                  <div class="sertificate__logo-item-text">
+                    Включены в реестр экспертов-техников
+                  </div>
+                </div>
+                <div class="sertificate__logo-item">
+                  <img src="public/images/img13.jpg" />
+                  <div class="sertificate__logo-item-text">
+                    Дипломированные эксперты-техники
+                  </div>
+                </div>
+                <div class="sertificate__logo-item">
+                  <img src="public/images/img14.jpg" />
+                  <div class="sertificate__logo-item-text">
+                    Все эксперты имеют профильное высшее техническое образование
+                  </div>
+                </div>
+                <div class="sertificate__logo-item">
+                  <img src="public/images/img15.jpg" />
+                  <div class="sertificate__logo-item-text">
+                    В рарсчетах используется сертифицированное программное обеспечение официальных диллеров
+                  </div>
+                </div>
+                <div class="sertificate__logo-item">
+                  <img src="public/images/img16.jpg" />
+                  <div class="sertificate__logo-item-text">
+                    Являемся участниками саморегулируемой организации профессиональных оценщиков
+                  </div>
+                </div>
+              </div>
+            </section>
+          </section>
+        <section class="examples">
+          <section class="examples-inner content">
+            <div class="examples__title">
+              Примеры оценки ущерба
+            </div>
+            <div class="examples__slider">
+              <div class="examples__slider-inner">
+                <div class="examples__slider-item">
+                  <div class="slider-item__example-item">
+                    <div class="example-item__image-slider">
+                      <div class="example-item__image-slider-inner">
+                        <img class="example-item__image-slider-item" src="public/images/VW1.jpg" />
+                        <img class="example-item__image-slider-item" src="public/images/VW2.jpg" />
+                        <img class="example-item__image-slider-item" src="public/images/VW3.jpg" />
+                      </div>
+                    </div>
+                    <div class="example-item__image-slider__controls">
+                        <span class="main-slider__control-item main-slider__control-item--current"></span>
+                        <span class="main-slider__control-item"></span>
+                        <span class="main-slider__control-item"></span>
+                    </div>
+                    <div class="example-item__head">
+                      <span class="example-item__title">Volkswagen Passat</span>
+                  <!--    <span class="example-item__date">12.02.16</span> -->
+                    </div>
+                    <div class="example-item__footer">
+                      <span class="example-item__footer-text">Сумма ущерба:</span>
+                      <span class="example-item__footer-price-holder">
+                        <span class="example-item__footer-price">73 013 руб.</span>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="slider-item__example-item">
+                    <div class="example-item__image-slider">
+                      <div class="example-item__image-slider-inner">
+                        <img class="example-item__image-slider-item" src="public/images/kia1.jpg" />
+                        <img class="example-item__image-slider-item" src="public/images/kia2.jpg" />
+                        <img class="example-item__image-slider-item" src="public/images/kia3.jpg" />
+                      </div>
+                    </div>
+                    <div class="example-item__image-slider__controls">
+                        <span class="main-slider__control-item main-slider__control-item--current"></span>
+                        <span class="main-slider__control-item"></span>
+                        <span class="main-slider__control-item"></span>
+                    </div>
+                    <div class="example-item__head">
+                      <span class="example-item__title">Kia Rio</span>
+                    <!--  <span class="example-item__date">12.02.16</span> -->
+                    </div>
+                    <div class="example-item__footer">
+                      <span class="example-item__footer-text">Сумма ущерба:</span>
+                      <span class="example-item__footer-price-holder">
+                        <span class="example-item__footer-price">75 359 руб.</span>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="slider-item__example-item">
+                    <div class="example-item__image-slider">
+                      <div class="example-item__image-slider-inner">
+                        <img class="example-item__image-slider-item" src="public/images/CC1.jpg" />
+                        <img class="example-item__image-slider-item" src="public/images/CC2.jpg" />
+                        <img class="example-item__image-slider-item" src="public/images/CC3.jpg" />
+                      </div>
+                    </div>
+                    <div class="example-item__image-slider__controls">
+                        <span class="main-slider__control-item main-slider__control-item--current"></span>
+                        <span class="main-slider__control-item"></span>
+                        <span class="main-slider__control-item"></span>
+                    </div>
+                    <div class="example-item__head">
+                      <span class="example-item__title">Volkswagen CC Passat</span>
+                    <!--  <span class="example-item__date">12.02.16</span> -->
+                    </div>
+                    <div class="example-item__footer">
+                      <span class="example-item__footer-text">Сумма ущерба:</span>
+                      <span class="example-item__footer-price-holder">
+                        <span class="example-item__footer-price">101 138 руб.</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="examples__slider-item">
+                  <div class="slider-item__example-item">
+                    <div class="example-item__image-slider">
+                      <div class="example-item__image-slider-inner">
+                        <img class="example-item__image-slider-item" src="public/images/audi1.jpg" />
+                        <img class="example-item__image-slider-item" src="public/images/audi2.jpg" />
+                        <img class="example-item__image-slider-item" src="public/images/audi3.jpg" />
+                      </div>
+                    </div>
+                    <div class="example-item__image-slider__controls">
+                        <span class="main-slider__control-item main-slider__control-item--current"></span>
+                        <span class="main-slider__control-item"></span>
+                        <span class="main-slider__control-item"></span>
+                    </div>
+                    <div class="example-item__head">
+                      <span class="example-item__title">Audi Q7</span>
+                  <!--    <span class="example-item__date">12.02.16</span> -->
+                    </div>
+                    <div class="example-item__footer">
+                      <span class="example-item__footer-text">Сумма ущерба:</span>
+                      <span class="example-item__footer-price-holder">
+                        <span class="example-item__footer-price">32 278 руб.</span>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="slider-item__example-item">
+                    <div class="example-item__image-slider">
+                      <div class="example-item__image-slider-inner">
+                        <img class="example-item__image-slider-item" src="public/images/HL1.jpg" />
+                        <img class="example-item__image-slider-item" src="public/images/HL2.jpg" />
+                        <img class="example-item__image-slider-item" src="public/images/HL3.jpg" />
+                      </div>
+                    </div>
+                    <div class="example-item__image-slider__controls">
+                        <span class="main-slider__control-item main-slider__control-item--current"></span>
+                        <span class="main-slider__control-item"></span>
+                        <span class="main-slider__control-item"></span>
+                    </div>
+                    <div class="example-item__head">
+                      <span class="example-item__title">Toyota Hilux</span>
+                  <!--    <span class="example-item__date">12.02.16</span> -->
+                    </div>
+                    <div class="example-item__footer">
+                      <span class="example-item__footer-text">Сумма ущерба:</span>
+                      <span class="example-item__footer-price-holder">
+                        <span class="example-item__footer-price">102 497 руб.</span>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="slider-item__example-item">
+                    <div class="example-item__image-slider">
+                      <div class="example-item__image-slider-inner">
+                        <img class="example-item__image-slider-item" src="public/images/bmw1.jpg" />
+                        <img class="example-item__image-slider-item" src="public/images/bmw2.jpg" />
+                        <img class="example-item__image-slider-item" src="public/images/bmw3.jpg" />
+                      </div>
+                    </div>
+                    <div class="example-item__image-slider__controls">
+                        <span class="main-slider__control-item main-slider__control-item--current"></span>
+                        <span class="main-slider__control-item"></span>
+                        <span class="main-slider__control-item"></span>
+                    </div>
+                    <div class="example-item__head">
+                      <span class="example-item__title">BMW E39</span>
+                  <!--    <span class="example-item__date">12.02.16</span> -->
+                    </div>
+                    <div class="example-item__footer">
+                      <span class="example-item__footer-text">Сумма ущерба:</span>
+                      <span class="example-item__footer-price-holder">
+                        <span class="example-item__footer-price">51 092 руб.</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <span class="examples__slider-control" data-dir="prev"><</span>
+              <span class="examples__slider-control" data-dir="next">></span>
+            </div>
+            <br>
+            <div class="footer__first-title">
+              Для клиентов «ДТП ПОМОЩЬ» автотехническая экспертиза проводится <span class="green-text">бесплатно</span> в течение 1-3 дней!
+            </div>
+            <div class="why-us__button-holder">
+                <button class="why-us__button">Получить экспертизу</button>
+            </div>
+          </section>
+        </section>
+        <section class="map">
+          <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=2DCmxW0fiTJz6Ud46dRSW6wZXaYOidxq&amp;width=100%&amp;height=520&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=true"></script>
+        </section>
+        <footer class="footer">
+          <section class="footer-inner content">
+
+            <div class="footer__contacts footer__contacts-phone">
+                <img src="public/images/phone-icon.png" class="contacts__icon contacts-phone__icon" />
+                <span class="contacts-phone__text">8 800 770 70 52</span>
+            </div>
+            <div class="footer__contacts footer__contacts-email">
+              <img src="public/images/email-icon.png" class="contacts__icon contacts-email__icon" />
+              <span class="contacts-email__text">
+                info@dtp-help.ru
+              </span>
+            </div>
+            <div class="footer__contacts footer__contacts-adress">
+                <img src="public/images/adress-icon.png" class="contacts__icon contacts-email__icon" />
+                <span class="contacts-days__text">
+                  г.Москва Озерковский пер. 15
+                </span>
+            </div>
+          </section>
+        </footer>
+        <div class="overlay"></div>
+        <div class="overlayCloseButton">x</div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="src/js/scripts.js"></script>
+</body>
+
+</html>
