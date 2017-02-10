@@ -1,1 +1,147 @@
-body {};
+html {
+}
+body {
+  background-color: #fff;
+}
+body a {
+  text-decoration: none;
+}
+.contentWrapper {
+  margin: 0 auto;
+  padding: 0 30px;
+  background-color: rgba(0, 0, 0, 0.1);
+  max-width: 960px;
+  box-sizing: border-box;
+}
+.headerTop {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.logoImg {
+  background: white;
+  margin: 10px 10px 10px 0;
+}
+.headerTop {
+  padding-top: 10px;
+}
+.headerLeft {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+}
+.headerRight a{
+  padding: 10px;
+}
+.menu {
+  margin: 20px 0 10px 0;
+  border: 2px dotted black;
+}
+.menuMainText {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0 30px 0;
+  font-size: 1.5rem;
+}
+.menuNav {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around;
+  flex: 0 1 400px;
+}
+.menuNav li {
+  padding: 10px;
+}
+.content {
+  border: 2px dotted black;
+}
+.headerName {
+  display: flex;
+  justify-content: center;
+  font-size: 1.5em;
+  margin: 50px 0 30px 0;
+}
+.sliderImgWrapper {
+  padding: 40px 60px;
+  border: 2px solid black;
+  max-width: 400px;
+  background: rgb(228, 228, 228);
+}
+.blockAdvantages {
+  display: flex;
+}
+.AdvantagesList {
+  margin: 0px 0 0 40px;
+}
+.AdvantagesList ul li {
+  margin-bottom: 5px;
+  font-size: 1.1em;
+  border: 2px solid black;
+  padding: 12px;
+  width: 170px;
+}
+#btn1:hover,
+#btn2:hover,
+#btn3:hover,
+#btn4:hover {
+  width: 214px;
+  margin-left: -42px;
+  border-left: 0;
+  background: rgb(228, 228, 228);
+  z-index: 10;
+}
+.callUs {
+  margin: 10px 0 10px 20px;
+  font-size: 1.8em;
+}
+.callButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 40px;
+  margin: 5px 0 5px 10px;
+  background: white;
+  border: 1px solid grey;
+  font-size: 0.5em;
+}
+.partners {
+  display: flex;
+  justify-content: center;
+}
+.theyTrustUs {
+  display: flex;
+  align-items: center;
+  max-width: 960px;
+}
+.theyTrustUs img {
+  background: white;
+  margin: 20px 50px 20px 10px;
+}
+.arrowLeft,
+.arrowRight {
+  font-size: 4em;
+  padding: 10px;
+}
+.partnersContainer {
+  display: flex;
+  justify-content: space-around;
+}
+.partnerBlock {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+.partnerBlock span {
+  margin-top: 15px;
+}
+.footer {
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+  margin-top: 50px;
+}
+.footer div {
+  margin: 5px 0;
+}
