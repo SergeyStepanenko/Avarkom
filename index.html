@@ -10,7 +10,9 @@
     <meta name="description" content="Avarkom Landing">
     <meta name="author" content="Avarkom Landing">
     <meta name="viewport" content="width=767, user-scalable=no">
-    
+
+    <link href="images/avarkov.ico" rel="shortcut icon" type="image/png" />
+    <link href="https://fonts.googleapis.com/css?family=Play:400,700&amp;subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="css/avarkom.css">
     <link rel="stylesheet" href="css/style_reset.css">
 
@@ -23,21 +25,19 @@
 
     <section class="dropDownItems">
       <div class="location">
-        <img src="images/location.png" alt="">
-        <div class="officeAddress">Крым г.Симферополь ул.Ленина 19</div>
+        <img src="images/location.png" alt="" width="18px" height="27px">
+        <div class="officeAddress">Крым г.Симферополь, ул.Ленина 19</div>
       </div>
       <div class="phone">
         <img src="images/phone.png" alt="">
         <a href="tel: +7 495 999 99 99">+7 (495) 999-99-99</a>
       </div>
-      <a class="callMe">
-        Перезвоните мне
-      </a>
+      <a class="callMe">Перезвоните мне</a>
     </section>
 
     <section class="headerTop">
         <img class="logoImg" src="images/avarkov.png" alt="" width="50px" height="50px">
-        <img class="mnuBtn" src="images/mnuBtn.PNG" alt="" width="50px" height="50px">
+        <img class="mnuBtn" src="images/mnuBtn.PNG" alt="" width="40px" height="50px">
     </section>
   </header>
 
@@ -55,27 +55,29 @@
   <div class="textUnderHeader">Помощь автовладельцам в аварийных ситуациях</div>
   <div class="phoneNumber"><a href="tel: +7 495 999 99 99">+7 (495) 999-99-99</a></div>
   <section class="capabilities">
-    <div>
+    <div class="capabilitiesSmallBlocks">
       <img class="icon" src="images/car.png" alt="">
-      <text class="textUnderIcon">Помощь в оформлении ДТП</text>
+      <div class="textUnderIcon">Помощь в оформлении ДТП</div>
     </div>
-    <div>
+    <div class="capabilitiesSmallBlocks">
       <img class="icon" src="images/note.png" alt="">
-      <text class="textUnderIcon">Заполнение Европротокола</text>
+      <div class="textUnderIcon">Заполнение Европротокола</div>
     </div>
-    <div>
+    <div class="capabilitiesSmallBlocks">
       <img class="icon" src="images/calc.png" alt="">
-      <text class="textUnderIcon">Бесплатный расчет ущерба</text>
+      <div class="textUnderIcon">Бесплатный расчет ущерба</div>
     </div>
-    <div>
+    <div class="capabilitiesSmallBlocks">
       <img class="icon" src="images/scales.png" alt="">
-      <text class="textUnderIcon">Автоюридическкая консультация</text>
+      <div class="textUnderIcon">Автоюридическкая консультация</div>
     </div>
   </section>
 
   <section class="weWillHelpYou">
     <div>МЫ ВАМ ПОМОЖЕМ!</div>
-    <sector><text style="font-weight: bold; margin-right: 10px;">Звоните</text> +7(494)555-55-55</sector>
+    <div class="callUs">
+      <span style="font-weight: bold;">Звоните</span> +7(494)555-55-55
+    </div>
     <div>или</div>
     <div class=""><a class="callBeBackBtn">Перезвоните мне</a></div>
   </section>
@@ -94,19 +96,19 @@
 
     <div class="listFreeItems">
       <div class="textHelpBlock">
-        <img src="images/checkbox.png" alt="">
+        <img src="images/checkbox.png" alt="" width="23px" height="23px">
         <div class="">Оформлении ДТП</div>
       </div>
       <div class="textHelpBlock">
-        <img src="images/checkbox.png" alt="">
+        <img src="images/checkbox.png" alt="" width="23px" height="23px">
         <div class="">Заполнении Европротокола</div>
       </div>
       <div class="textHelpBlock">
-        <img src="images/checkbox.png" alt="">
+        <img src="images/checkbox.png" alt="" width="23px" height="23px">
         <div class="">Расчет ущерба</div>
       </div>
       <div class="textHelpBlock">
-        <img src="images/checkbox.png" alt="">
+        <img src="images/checkbox.png" alt="" width="23px" height="23px">
         <div class="">Автоюридическая косультация</div>
       </div>
   </section>
@@ -161,8 +163,6 @@
         </div>
       </div>
 
-
-
     </div>
     <div class="navigation">
       <div id="btn1"></div>
@@ -171,16 +171,44 @@
       <div id="btn4"></div>
       <div id="btn5"></div>
     </div>
-
-
-
   </section>
 
+  <section class="ourPartners">
+    <div class="headerText">Наши партнеры</div>
+    <div class="partnersBlock">
+      <a href="#"><img src="images/imeupravologo.png" alt=""></a>
+      <a href="#"><img src="images/dtpexpertlogo.png" alt=""></a>
+      <a href="#"><img src="images/pravozashitalogo.png" alt=""></a>
+  </div>
+  </section>
 
+  <iframe class="googleMap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2823.660631626553!2d34.10537094352926!3d44.950566485220236!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40eadddfdd1b4a15%3A0x496e9da6fecc2fae!2s19+Lenina+St%2C+Simferopol&#39;!5e0!3m2!1sen!2sru!4v1487775031259" frameborder="0" style="border:0" allowfullscreen></iframe>
 
+  <section class="contacts">
+    <div class="headerText">Контакты</div>
+    <div class="contactsText">
+      <img src="images/location.png" alt="" width="18px" height="27px">
+      <div class="">Наш головной офис находится по адресу:
+        <span style="font-weight: bold; color: black;">Крым, г.Симферополь, ул.Ленина д.19</span>
+      </div>
+    </div>
 
+    <div class="telephone">
+      <img src="images/phone.png" alt="" width="23px" height="22px">
+      <div>Телефон:
+        <a style="text-decoration: none; color: black;" href="tel: +7 (459) 456-67-56">+7 (459) 456-67-56</a>
+      </div>
+    </div>
 
+    <div class="email">
+      <img src="images/mailicon.png" alt="" width="25px" height="15px">
+      <div>Email:
+        <a href="mailto:mail@gmail.com" style="font-weight: bold; color: black;">mail@gmail.com</a>
+      </div>
+    </div>
+  </section>
 
+  <footer class="footer">@ДПТ ПОМОЩЬ 2004-2015</footer>
 
 </div>
 

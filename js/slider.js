@@ -24,7 +24,7 @@
 
   document.querySelector("#btn2").onclick = function () {
     for (var i = 0; i < block.length; i++) {
-      document.querySelectorAll(".quotation")[i].style.transform = "translate3d(-287px, 0, 0)";
+      document.querySelectorAll(".quotation")[i].style.transform = "translate3d(-275px, 0, 0)";
       btn1.style.backgroundColor = "#E9E9E9";
       btn2.style.backgroundColor = "#D50821";
       btn3.style.backgroundColor = "#E9E9E9";
@@ -35,7 +35,7 @@
 
   document.querySelector("#btn3").onclick = function () {
     for (var i = 0; i < block.length; i++) {
-      document.querySelectorAll(".quotation")[i].style.transform = "translate3d(-574px, 0, 0)";
+      document.querySelectorAll(".quotation")[i].style.transform = "translate3d(-550px, 0, 0)";
       btn1.style.backgroundColor = "#E9E9E9";
       btn2.style.backgroundColor = "#E9E9E9";
       btn3.style.backgroundColor = "#D50821";
@@ -46,7 +46,7 @@
 
   document.querySelector("#btn4").onclick = function () {
     for (var i = 0; i < block.length; i++) {
-      document.querySelectorAll(".quotation")[i].style.transform = "translate3d(-861px, 0, 0)";
+      document.querySelectorAll(".quotation")[i].style.transform = "translate3d(-825px, 0, 0)";
       btn1.style.backgroundColor = "#E9E9E9";
       btn2.style.backgroundColor = "#E9E9E9";
       btn3.style.backgroundColor = "#E9E9E9";
@@ -57,7 +57,7 @@
 
   document.querySelector("#btn5").onclick = function () {
     for (var i = 0; i < block.length; i++) {
-      document.querySelectorAll(".quotation")[i].style.transform = "translate3d(-1148px, 0, 0)";
+      document.querySelectorAll(".quotation")[i].style.transform = "translate3d(-1110px, 0, 0)";
       btn1.style.backgroundColor = "#E9E9E9";
       btn2.style.backgroundColor = "#E9E9E9";
       btn3.style.backgroundColor = "#E9E9E9";

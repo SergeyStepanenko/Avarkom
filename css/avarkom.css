@@ -1,5 +1,6 @@
 html {
   box-sizing: border-box;
+  font-family: 'Play', sans-serif !important;
 }
 body {
   background-color: #FEFEFE;
@@ -12,14 +13,14 @@ body a {
   min-height: 1080px;
   background-image: url(../images/dtpBackground.png);
   background-position: top;
-  background-size: 2300px;
+  background-size: 2400px;
   background-repeat: no-repeat;
   color: white;
 }
 .bkgImg {
   height: 500px;
   background-image: url(../images/bkg2.png);
-  background-size: 710px 500px;
+  background-size: 710px 550px;
   background-repeat: no-repeat;
   background-position: left;
 }
@@ -47,9 +48,19 @@ body a {
     display: flex;
     justify-content: center;
   }
+  .callMe:hover,
+  .phoneNumber:hover,
+  .callBeBackBtn:hover {
+  transition: all .08s ease-in-out;
+  }
+  .callMe,
+  .phoneNumber,
+  .callBeBackBtn {
+  transition: all .19s ease-in-out;
+  }
   .logoImg,
   .mnuBtn {
-    margin: 6px 19px;
+    margin: 54px 19px;
   }
   .contentWrapper {
     box-sizing: border-box;
@@ -59,7 +70,7 @@ body a {
     flex-flow: column;
     position: absolute;
     top: -260px;
-    height: 320px;
+    height: 270px;
     width: 100%;
     transition: all 0.5s ease-in-out;
     z-index: 10;
@@ -77,24 +88,46 @@ body a {
   .phone {
     display: flex;
     color: black;
-    margin: 15px 0 0 20px;
-    font-size: 0.9em;
+    margin: -15px 0 0 20px;
+    font-size: 1em;
+    line-height: 20px;
+  }
+  .location {
+    margin-bottom: 34px;
   }
   .location div {
     display: flex;
     align-items: center;
     color: black;
+    margin-left: 15px;
+    width: 208px;
+    margin-top: -3px;
+  }
+  .phone {
+    margin-bottom: 15px;
   }
   .phone a {
     display: flex;
     align-items: center;
+    margin-left: 12px;
+    color: black;
+  }
+  .callMe:hover {
+    background-color: #D80020;
+    color: #EAEAEA;
+  }
+  .callMe:active {
+    background-color: #D80020;
+    color: #EAEAEA;
   }
   .callMe {
-    margin: 40px 20px 0 20px;
-    border: 2px solid #D50821;
+    margin: 30px 20px -20px 20px;
+    border: 2px solid #D80020;
     border-radius: 4px;
-    color: #D50821;
-    font-size: 1.8em;
+    color: #D80020;
+    font-size: 1.4em;
+    font-weight: bold;
+    padding: 8px;
   }
   .menu {
     margin: 60px 0 0 0;
@@ -109,7 +142,7 @@ body a {
     margin: 10px;
   }
   .headerName {
-    font-size: 2em;
+    font-size: 20px;
     margin: 60px 20px 0 20px;
     text-align: center;
   }
@@ -120,25 +153,32 @@ body a {
   }
   .phoneNumber {
     margin: 40px 20px 0 20px;
-    border: 2px solid white;
-    border-radius: 20px;
+    /*border: 2px solid white;*/
+    border-radius: 30px;
+    background-color: #D80020;
   }
   .phoneNumber a {
     text-decoration: none;
     color: white;
-    font-size: 1.7em;
+    font-size: 1.4em;
     margin: 6px;
+    padding: 11px;
+  }
+  .phoneNumber :hover {
+    border-radius: 30px;
+    background-color: #C0001C;
   }
   .capabilities {
     flex-flow: column;
     align-items: center;
     padding: 0 0 60px 0;
   }
-  .capabilities div {
+  .capabilitiesSmallBlocks {
     margin: 65px 0 0 0;
   }
   .textUnderIcon {
     text-align: center;
+    margin-top: 20px;
   }
   .icon {
     display: flex;
@@ -147,20 +187,27 @@ body a {
   .weWillHelpYou {
     text-align: center;
     height: 200px;
-    background-color: #D50821;
+    background-color: #D80020;
     font-size: 1.3em;
   }
   .weWillHelpYou div {
-    padding: 15px;
+    padding: 11px;
+  }
+  .callUs {
+    font-size: 18px;
   }
   .callBeBackBtn {
     background: #FEFEFE;
-    border: 1px solid #FEFEFE;
+    border: 2px solid #FEFEFE;
     border-radius: 5px;
-    color: #D50821;
+    color: #D80020;
     margin-top: 10px;
     padding: 10px 25px;
     font-weight: bold;
+  }
+  .callBeBackBtn:hover {
+    color: #FEFEFE;
+    background: #D80020;
   }
   .howWeHelp {
     background-color: #FEFEFE;
@@ -203,14 +250,14 @@ body a {
   .blockQuotations {
     display: flex;
     justify-content: space-between;
-    width: 285px;
+    width: 275px;
     margin-left: 0px;
     transition: all .5s ease-in-out;
     overflow: hidden;
   }
   .quotation {
     position: relative;
-    width: 300px;
+    width: 270px;
     height: 200px;
     color: #363636;
     border: 1px solid #FEFEFE;
@@ -242,18 +289,75 @@ body a {
   #btn5 {
     width: 10px;
     height: 10px;
-    border: 1.5px solid #D50821;
+    border: 1.5px solid #D80020;
     border-radius: 20px;
     margin: 5px;
   }
 
   #btn1 {
-    background-color: #D50821;
+    background-color: #D80020;
   }
   .navigation {
     display: flex;
     justify-content: center;
     margin-top: 50px;
+  }
+  .partnersBlock {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+  }
+  .ourPartners a {
+    margin: 40px;
+  }
+  .googleMap {
+    width: 100%;
+    height: 370px;
+  }
+  .contacts {
+    padding: 0 20px;
+  }
+  .contactsText {
+    display: flex;
+  }
+  .contactsText div {
+    display: flex;
+    flex-flow: column;
+    width: 240px;
+    color: #363636;
+    line-height: 22px;
+    margin: 0 0 0 15px;
+  }
+  .telephone {
+    display: flex;
+    margin-top: 35px;
+  }
+  .telephone div {
+    color: #363636;
+    display: flex;
+    flex-flow: column;
+    line-height: 22px;
+    margin: -6px 0 0 9px;
+  }
+  .email {
+    display: flex;
+    margin-top: 35px;
+  }
+  .email div {
+    color: #363636;
+    display: flex;
+    flex-flow: column;
+    line-height: 22px;
+    margin: -4px 0 0 9px;
+  }
+  .footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    margin-top: 45px;
+    background-color: #BABABA;
+    color: #363636;
   }
 
 /*}*/
