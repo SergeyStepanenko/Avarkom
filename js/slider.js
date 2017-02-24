@@ -6,7 +6,8 @@
   blockWidth = window.getComputedStyle(singleBlock, null).getPropertyValue("width").replace(/[a-z]/g, ""),
   blockMargin = window.getComputedStyle(singleBlock, null).getPropertyValue("margin").split(" ").pop().replace(/[a-z]/g, "") * 2,
   blockRealWidth = +blockWidth + +blockMargin,
-  translateDistance = "'translate3d(" + blockRealWidth + "px, 0, 0)'",
+  t1 = "translate3d(",
+  t2 = "px, 0, 0)",
   btn1 = document.querySelector("#btn1"),
   btn2 = document.querySelector("#btn2"),
   btn3 = document.querySelector("#btn3"),
@@ -14,72 +15,62 @@
   btn5 = document.querySelector("#btn5");
 
 
-  console.log(translateDistance);
 
   document.querySelector("#btn1").onclick = function () {
     for (var i = 0; i < block.length; i++) {
       document.querySelectorAll(".quotation")[i].style.transform = "translate3d(0px, 0, 0)";
-      btn1.style.backgroundColor = "#D50821";
-      btn2.style.backgroundColor = "#E9E9E9";
-      btn3.style.backgroundColor = "#E9E9E9";
-      btn4.style.backgroundColor = "#E9E9E9";
-      btn5.style.backgroundColor = "#E9E9E9";
     }
+    btn1.style.backgroundColor = "#D50821";
+    btn2.style.backgroundColor = "#E9E9E9";
+    btn3.style.backgroundColor = "#E9E9E9";
+    btn4.style.backgroundColor = "#E9E9E9";
+    btn5.style.backgroundColor = "#E9E9E9";
   }, false;
 
   document.querySelector("#btn2").onclick = function () {
     for (var i = 0; i < block.length; i++) {
-      document.querySelectorAll(".quotation")[i].style.transform = "translate3d(-280px, 0, 0)";
-      // document.querySelectorAll(".quotation")[i].style.transform = translateDistance; //apparently I`ve to use EVAL
-      btn1.style.backgroundColor = "#E9E9E9";
-      btn2.style.backgroundColor = "#D50821";
-      btn3.style.backgroundColor = "#E9E9E9";
-      btn4.style.backgroundColor = "#E9E9E9";
-      btn5.style.backgroundColor = "#E9E9E9";
+      shiftBlocks(1);
     }
+    btn2.style.backgroundColor = "#D50821";
   }, false;
 
   document.querySelector("#btn3").onclick = function () {
     for (var i = 0; i < block.length; i++) {
-      document.querySelectorAll(".quotation")[i].style.transform = "translate3d(-560px, 0, 0)";
-      btn1.style.backgroundColor = "#E9E9E9";
-      btn2.style.backgroundColor = "#E9E9E9";
-      btn3.style.backgroundColor = "#D50821";
-      btn4.style.backgroundColor = "#E9E9E9";
-      btn5.style.backgroundColor = "#E9E9E9";
+      shiftBlocks(2);
     }
+    btn3.style.backgroundColor = "#D50821";
   }, false;
 
   document.querySelector("#btn4").onclick = function () {
-    for (var i = 0; i < block.length; i++) {
-      document.querySelectorAll(".quotation")[i].style.transform = "translate3d(-840px, 0, 0)";
-      btn1.style.backgroundColor = "#E9E9E9";
-      btn2.style.backgroundColor = "#E9E9E9";
-      btn3.style.backgroundColor = "#E9E9E9";
-      btn4.style.backgroundColor = "#D50821";
-      btn5.style.backgroundColor = "#E9E9E9";
-    }
+    shiftBlocks(3);
+    btn4.style.backgroundColor = "#D50821";
   }, false;
 
   document.querySelector("#btn5").onclick = function () {
+    shiftBlocks(4);
+    btn5.style.backgroundColor = "#D50821";
+  }, false;
+
+
+
+  function shiftBlocks(times) {
     for (var i = 0; i < block.length; i++) {
-      document.querySelectorAll(".quotation")[i].style.transform = "translate3d(-1120px, 0, 0)";
+      document.querySelectorAll(".quotation")[i].style.transform = t1 + -blockRealWidth * times + t2;
+    }
+    // var a1 = "btn",
+    // a2 = ".style.backgroundColor";
+
+    for (var i = 0; i < block.length; i++) {
       btn1.style.backgroundColor = "#E9E9E9";
       btn2.style.backgroundColor = "#E9E9E9";
       btn3.style.backgroundColor = "#E9E9E9";
       btn4.style.backgroundColor = "#E9E9E9";
-      btn5.style.backgroundColor = "#D50821";
+      btn5.style.backgroundColor = "#E9E9E9";
+      // a1 + i + a2 = "#D50821";
     }
-  }, false;
-
+  }
 
 }());
-
-
-
-
-
-
 
 
 
