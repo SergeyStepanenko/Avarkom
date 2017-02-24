@@ -234,6 +234,9 @@ body a {
     display: flex;
     align-items: center;
   }
+  .textHelpBlock img {
+    margin-right: 10px;
+  }
   .listFreeItems {
     padding: 0 0 40px 0;
   }
