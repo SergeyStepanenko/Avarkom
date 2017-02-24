@@ -56,9 +56,7 @@
   function shiftBlocks(times) {
     for (var i = 0; i < block.length; i++) {
       document.querySelectorAll(".quotation")[i].style.transform = t1 + -blockRealWidth * times + t2;
-    }
-    // var a1 = "btn",
-    // a2 = ".style.backgroundColor";
+    };
 
     for (var i = 0; i < block.length; i++) {
       btn1.style.backgroundColor = "#E9E9E9";
@@ -66,9 +64,8 @@
       btn3.style.backgroundColor = "#E9E9E9";
       btn4.style.backgroundColor = "#E9E9E9";
       btn5.style.backgroundColor = "#E9E9E9";
-      // a1 + i + a2 = "#D50821";
-    }
-  }
+    };
+  };
 
 }());
 

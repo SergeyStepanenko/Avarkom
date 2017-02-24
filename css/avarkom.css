@@ -365,6 +365,16 @@ body a {
 
 /*}*/
 
-@media only screen and (max-width : 768px) {
-
+@media only screen and (min-width : 321px) {
+ .header {
+   display: none;
+ }
+ .menu {
+   margin-top: 0;
+ }
+ .logoImg {
+   display: flex;
+   justify-content: center;
+   position: absolute;
+ }
 }
