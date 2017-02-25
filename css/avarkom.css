@@ -27,9 +27,6 @@ body a {
 .header {
   background-color: #FEFEFE;
 }
-.menu {
-
-}
 
 
 /*-------------------------media queries------------------------*/
@@ -147,8 +144,8 @@ body a {
     text-align: center;
   }
   .textUnderHeader {
-    margin: 30px 20px 0 20px;
-    font-size: 1.5em;
+    margin: 20px 20px 0 20px;
+    font-size: 24px;
     text-align: center;
   }
   .phoneNumber {
@@ -362,19 +359,60 @@ body a {
     background-color: #BABABA;
     color: #363636;
   }
+  .headerMediumScreenSize {
+    display: none;
+  }
 
 /*}*/
 
-@media only screen and (min-width : 321px) {
+@media only screen and (min-width : 321px) and (max-width : 768px){
  .header {
    display: none;
  }
  .menu {
-   margin-top: 0;
+   margin-top: 0px;
  }
  .logoImg {
    display: flex;
    justify-content: center;
    position: absolute;
  }
+ .contentWrapper {
+   padding-top: 40px;
+ }
+ .headerMediumScreenSize {
+   display: flex;
+   justify-content: space-between;
+   max-width: 1200px;
+   height: 60px;
+   margin: 0 25px 0 25px;
+   background-color: #FEFEFE;
+   color: #363636;
+   border-radius: 5px;
+ }
+ .callMe {
+   margin: 7px 10px;
+ }
+ .phoneMediumScreenSize {
+   display: none;
+ }
+ .location {
+   display: flex;
+   margin: 0 0 0 0;
+ }
+ .pin {
+   margin: 15px 0 0 10px;
+  }
+  .logoCenter {
+    margin-top: -20px;
+  }
+  .menu {
+    display: flex;
+    margin: 55px 25px 0 25px;
+    justify-content: space-between;
+  }
+  .headerName {
+    font-size: 38px;
+  }
+
 }
