@@ -20,7 +20,7 @@ body a {
 .bkgImg {
   height: 500px;
   background-image: url(../images/bkg2.png);
-  background-size: 710px 550px;
+  background-size: 768px 550px;
   background-repeat: no-repeat;
   background-position: left;
 }
@@ -149,15 +149,17 @@ body a {
     text-align: center;
   }
   .phoneNumber {
-    margin: 40px 20px 0 20px;
-    /*border: 2px solid white;*/
+    margin: 40px auto 0 auto;
+    border: 2px solid white;
     border-radius: 30px;
-    background-color: #D80020;
+    max-width: 394px;
+    box-sizing: border-box;
+    /*background-color: #D80020;*/
   }
   .phoneNumber a {
     text-decoration: none;
     color: white;
-    font-size: 1.4em;
+    font-size: 24px;
     margin: 6px;
     padding: 11px;
   }
@@ -185,7 +187,7 @@ body a {
     text-align: center;
     height: 200px;
     background-color: #D80020;
-    font-size: 1.3em;
+    font-size: 24px;
   }
   .weWillHelpYou div {
     padding: 11px;
@@ -199,7 +201,7 @@ body a {
     border-radius: 5px;
     color: #D80020;
     margin-top: 10px;
-    padding: 10px 25px;
+    padding: 5px 20px;
     font-weight: bold;
   }
   .callBeBackBtn:hover {
@@ -212,12 +214,12 @@ body a {
     padding: 0 20px;
   }
   .headerText {
-    font-size: 1.9em;
+    font-size: 30px;
     padding: 40px 0 40px 0;
   }
   .textPart1,
   .textPart2 {
-    font-size: 1.1em;
+    font-size: 16px;
   }
 
   .textPart2 {
@@ -365,7 +367,7 @@ body a {
 
 /*}*/
 
-@media only screen and (min-width : 321px) and (max-width : 768px){
+@media only screen and (min-width : 650px) {
  .header {
    display: none;
  }
@@ -377,15 +379,15 @@ body a {
    justify-content: center;
    position: absolute;
  }
- .contentWrapper {
-   padding-top: 40px;
+ .content_1 {
+   padding: 40px 25px 0 25px;
  }
  .headerMediumScreenSize {
    display: flex;
    justify-content: space-between;
    max-width: 1200px;
    height: 60px;
-   margin: 0 25px 0 25px;
+   margin: 0 auto;
    background-color: #FEFEFE;
    color: #363636;
    border-radius: 5px;
@@ -404,15 +406,56 @@ body a {
    margin: 15px 0 0 10px;
   }
   .logoCenter {
-    margin-top: -20px;
+    /*position: absolute;*/
+    margin: -20px auto 0 auto;
   }
   .menu {
     display: flex;
-    margin: 55px 25px 0 25px;
-    justify-content: space-between;
+    margin: 55px auto 0 auto;
+    justify-content: space-around;
+    max-width: 760px;
   }
   .headerName {
     font-size: 38px;
   }
-
+  .phoneNumber {
+    margin: 40px auto 0 auto;
+    border: 2px solid white;
+    border-radius: 30px;
+    max-width: 394px;
+    box-sizing: border-box;
+  }
+  .phoneNumber a {
+    font-size: 38px;
+  }
+  .capabilities {
+    justify-content: space-around;
+    flex-flow: row;
+    max-width: 560px;
+    flex-wrap: wrap;
+    margin: 0 auto;
+  }
+  .weWillHelpYou {
+    display: flex;
+    flex-wrap: wrap;
+    height: 125px;
+    justify-content: center;
+    align-items: center;
+  }
+  .onTop768px {
+    width: 100%;
+  }
+  .weWillHelpYou div {
+    padding: 0 11px;
+  }
+  #headerText {
+    display: flex;
+    justify-content: flex-start;
+  }
+  .boldRed {
+    font-weight: bold;
+    color: #D80020;
+  }
+  .theyTrustUs {
+  }
 }
