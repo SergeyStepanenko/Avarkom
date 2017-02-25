@@ -1,6 +1,6 @@
 html {
-  box-sizing: border-box;
   font-family: 'Play', sans-serif !important;
+  /*box-sizing: border-box;*/
 }
 body {
   background-color: #FEFEFE;
@@ -23,6 +23,11 @@ body a {
   background-size: 768px 550px;
   background-repeat: no-repeat;
   background-position: left;
+  margin: 0 auto;
+  max-width: 768px;
+}
+.bkg2 {
+  display: none;
 }
 .header {
   background-color: #FEFEFE;
@@ -208,10 +213,16 @@ body a {
     color: #FEFEFE;
     background: #D80020;
   }
+  .howWeHelpWrapper {
+    width: 100%;
+    background-color: #FEFEFE;
+  }
   .howWeHelp {
     background-color: #FEFEFE;
     color: #363636;
     padding: 0 20px;
+    max-width: 600px;
+    margin: 0 auto;
   }
   .headerText {
     font-size: 30px;
@@ -250,29 +261,30 @@ body a {
     color: #363636;
   }
   .blockQuotations {
-    display: flex;
-    justify-content: space-between;
-    width: 275px;
-    margin-left: 0px;
-    transition: all .5s ease-in-out;
+    width: 280px;
     overflow: hidden;
+  }
+  .quotationWrapper {
+    display: flex;
+    justify-content: center;
+    width: 1400px;
+    height: 200px;
+    /*transform: translate3d(-280px, 0px, 0px);*/
+    transition: all .3s ease-in-out;
   }
   .quotation {
     position: relative;
     width: 270px;
     height: 200px;
     color: #363636;
-    border: 1px solid #FEFEFE;
     border-radius: 7px;
-    padding: 20px 10px 20px 15px;
-    font-size: .85em;
     background-color: #FEFEFE;
     box-sizing: border-box;
-    float: left;
     margin: 0 5px;
-    left: 0px;
-    transition: all .3s ease-in-out;
-    /*transform: translate3d(0, 0, 0);*/
+  }
+  .quotationInner {
+    font-size: 14px;
+    padding: 20px 10px 20px 15px;
   }
   .authorBlock {
     width: 250px;
@@ -280,7 +292,7 @@ body a {
   .authorBlock {
     display: flex;
     align-items: center;
-    font-size: 1.1em;
+    font-size: 16px;
     margin: 20px 0 30px 0;
     font-weight: bold;
   }
@@ -456,6 +468,67 @@ body a {
     font-weight: bold;
     color: #D80020;
   }
-  .theyTrustUs {
+  .blockQuotationsWrapper {
+    display: flex;
+    align-items: center;
+  }
+  .arrow {
+    margin: 0 50px;
+  }
+  .arrowImg {
+    height: 77px;
+    opacity: 0.6;
+  }
+  .partnersBlock {
+    flex-flow: row;
+    justify-content: center;;
+  }
+  .partnersBlock a {
+    margin: 40px 25px;
+  }
+  .googleMap {
+    position: absolute;
+  }
+  .contacts {
+    position: relative;
+    width: 440px;
+    height: 355px;
+    background-color: #FEFEFE;
+    box-sizing: border-box;
+    margin-top: 15px;
+  }
+  .contactsText,
+  .telephone,
+  .email {
+    margin-left: 50px;
+    line-height: 19px;
+    font-size: 16px;
+  }
+  .contactsText div {
+    width: auto;
+  }
+  .contactWrapper {
+    display: flex;
+    justify-content: flex-end;
+    height: 370px;
+  }
+  .footer {
+    margin: 0;
+  }
+}
+
+@media only screen and (min-width : 1366px) {
+  .howWeHelpWrapper {
+    display: flex;
+  }
+  .howWeHelp {
+    width: 50%;
+  }
+  .bkgImg {
+    display: none;
+  }
+  .bkg2 {
+    display: flex;
+    width: 50%;
   }
 }
