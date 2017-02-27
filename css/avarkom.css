@@ -12,14 +12,14 @@ body a {
   min-height: 1080px;
   background-image: url(../images/dtpBackground.png);
   background-position: top;
-  background-size: 2400px;
+  background-size: 2500px;
   background-repeat: no-repeat;
   color: white;
 }
 .bkgImg {
   height: 500px;
   background-image: url(../images/bkg2.png);
-  background-size: 768px 550px;
+  background-size: 700px 500px;
   background-repeat: no-repeat;
   background-position: left;
   margin: 0 auto;
@@ -131,7 +131,7 @@ body a {
     padding: 8px;
   }
   .menu {
-    margin: 60px 0 0 0;
+    margin: 10px 0 0 0;
   }
   .citiesHeader {
     padding: 10px;
@@ -143,22 +143,23 @@ body a {
     margin: 10px;
   }
   .headerName {
-    font-size: 20px;
+    font-size: 30px;
     margin: 60px 20px 0 20px;
     text-align: center;
+    line-height: 34px;
   }
   .textUnderHeader {
     margin: 20px 20px 0 20px;
-    font-size: 24px;
+    font-size: 22px;
     text-align: center;
   }
   .phoneNumber {
     margin: 40px auto 0 auto;
-    border: 2px solid white;
+    /*border: 2px solid white;*/
     border-radius: 30px;
-    max-width: 394px;
+    max-width: 285px;
     box-sizing: border-box;
-    /*background-color: #D80020;*/
+    background-color: #D80020;
   }
   .phoneNumber a {
     text-decoration: none;
@@ -167,21 +168,19 @@ body a {
     margin: 6px;
     padding: 11px;
   }
-  .phoneNumber :hover {
-    border-radius: 30px;
-    background-color: #C0001C;
-  }
   .capabilities {
     flex-flow: column;
     align-items: center;
     padding: 0 0 60px 0;
   }
   .capabilitiesSmallBlocks {
-    margin: 65px 0 0 0;
+    margin: 65px 50px 0 50px;
   }
   .textUnderIcon {
     text-align: center;
     margin-top: 20px;
+    font-size: 18px;
+    max-width: 160px;
   }
   .icon {
     display: flex;
@@ -194,7 +193,8 @@ body a {
     font-size: 24px;
   }
   .weWillHelpYou div {
-    padding: 11px;
+    line-height: 36px;
+    font-size: 20px;
   }
   .callUs {
     font-size: 18px;
@@ -205,8 +205,13 @@ body a {
     border-radius: 5px;
     color: #D80020;
     margin-top: 10px;
-    padding: 5px 20px;
+    padding: 9px 16px;
     font-weight: bold;
+    font-size: 20px;
+    height: 45px;
+  }
+  .callBeBackBtnWrapper {
+    margin-top: 12px;
   }
   .callBeBackBtn:hover {
     color: #FEFEFE;
@@ -220,11 +225,11 @@ body a {
     background-color: #FEFEFE;
     color: #363636;
     padding: 0 20px;
-    max-width: 600px;
+    max-width: 700px;
     margin: 0 auto;
   }
   .headerText {
-    font-size: 30px;
+    font-size: 28px;
     padding: 40px 0 40px 0;
   }
   .textPart1,
@@ -237,7 +242,7 @@ body a {
   }
   .textHelpBlock {
     display: flex;
-    margin: 10px 0;
+    margin: 19px 0;
   }
   .textHelpBlock div {
     display: flex;
@@ -319,13 +324,20 @@ body a {
     display: flex;
     flex-flow: column;
     align-items: center;
+    padding-bottom: 25px;
   }
   .ourPartners a {
-    margin: 40px;
+    margin: 25px;
   }
   .googleMap {
     width: 100%;
     height: 370px;
+  }
+  #mapCenter {
+    display: block;
+  }
+  #mapLeft {
+    display: none;
   }
   .contacts {
     padding: 0 20px;
@@ -390,10 +402,36 @@ body a {
     justify-content: space-between;
     align-items: center;
   }
+  .onTop768px {
+    font-size: 24px !important;
+    padding-top: 18px;
+  }
 
 /*}*/
 
-@media only screen and (min-width : 650px) {
+@media only screen and (min-width : 700px) {
+  .textUnderHeader {
+    font-size: 24px;
+  }
+  #mapCenter {
+    display: none;
+  }
+  #mapLeft {
+    display: block;
+  }
+  #headerTextPartners {
+    padding-bottom: 0;
+  }
+  .partnersBlock {
+    padding-bottom: 0;
+  }
+  .contentWrapper {
+    background-size: 1777px;
+  }
+  .bkgImg {
+    height: 550px;
+    background-size: 768px 550px;
+  }
   .arrow {
     display: block;
   }
@@ -421,6 +459,7 @@ body a {
    background-color: #FEFEFE;
    color: #363636;
    border-radius: 5px;
+   padding: 0 16px;
  }
  .callMe {
    margin: 7px 10px;
@@ -451,9 +490,9 @@ body a {
   .phoneNumber {
     margin: 40px auto 0 auto;
     border: 2px solid white;
-    border-radius: 30px;
     max-width: 394px;
     box-sizing: border-box;
+    background-color: rgba(255, 0, 0, 0);
   }
   .phoneNumber a {
     font-size: 38px;
@@ -461,7 +500,7 @@ body a {
   .capabilities {
     justify-content: space-around;
     flex-flow: row;
-    max-width: 560px;
+    max-width: 620px;
     flex-wrap: wrap;
     margin: 0 auto;
   }
@@ -533,14 +572,30 @@ body a {
   .footer {
     margin: 0;
   }
+  .phoneNumber:hover {
+    background-color: #C0001C;
+  }
 }
 
 @media only screen and (min-width : 1366px) {
+  .textUnderHeader {
+    font-size: 24px;
+  }
+  .contentWrapper {
+    background-size: 2000px;
+  }
+  .howWeHelpWrapperWrapper {
+    width: 100%;
+    background-color: #FEFEFE;
+  }
   .howWeHelpWrapper {
     display: flex;
+    max-width: 1366px;
+    margin: 0 auto;
   }
   .howWeHelp {
     width: 50%;
+    padding-left: 100px;
   }
   .bkgImg {
     display: none;
@@ -548,5 +603,63 @@ body a {
   .bkg2 {
     display: flex;
     width: 50%;
+    max-width: 700px;
+  }
+  .phoneMediumScreenSize {
+    display: flex;
+    align-items: center;
+    padding-right: 20px;
+  }
+  .phoneMediumScreenSize a {
+    color: black !important;
+  }
+  .location {
+    flex: 1 1 auto;
+  }
+  .logoCenter {
+    margin-left: 170px;
+  }
+  .wrapperH {
+    display: flex;
+    flex: 1 1 auto;
+    justify-content: flex-end;
+  }
+  .capabilities {
+    justify-content: center;
+    flex-flow: row;
+  }
+  .capabilitiesSmallBlocks {
+    margin: 65px 65px 0 65px;
+  }
+  .textUnderIcon {
+    width: 155px;
+  }
+  .onTop768px {
+    width: auto;
+  }
+  .weWillHelpYou {
+    height: 60px;
+    justify-content: space-around;;
+  }
+  .callBeBackBtnWrapper {
+    margin-top: 0px;
+  }
+  .weWillHelpYouWrapper {
+    width: 100%;
+    background-color: #D80020;
+  }
+  .weWillHelpYou {
+    max-width: 950px;
+    margin: 0 auto;
+  }
+  .blockQuotations {
+    width: 840px;
+    overflow: hidden;
+  }
+
+  #btn2,
+  #btn4,
+  #btn5 {
+    display: none;
   }
 }

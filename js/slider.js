@@ -21,30 +21,44 @@
     var a = "btn",
     c = ".style.backgroundColor = '#D50821'";
 
-      document.querySelector(".quotationWrapper").style.transform = t1 + -blockWidth * (+times - 1) + t2;
+    document.querySelector(".quotationWrapper").style.transform = t1 + -blockWidth * (+times - 1) + t2;
 
-      for (var i = 0; i < document.querySelectorAll(".btn").length; i++) {
-        document.querySelectorAll(".btn")[i].style.backgroundColor = "#E9E9E9";
-      }
+    for (var i = 0; i < document.querySelectorAll(".btn").length; i++) {
+      document.querySelectorAll(".btn")[i].style.backgroundColor = "#E9E9E9";
+    }
 
-      eval(a + times + c);
+    eval(a + times + c);
   };
 
   document.querySelector("#arrowLeft").addEventListener("click", toLeft, false);
 
   function toLeft() {
-    if (sliderPosition != 1) {
-      sliderPosition = +sliderPosition - 1;
-      shiftBlocks(sliderPosition);
+    if (document.body.clientWidth > 1366) {
+      if (sliderPosition != 1) {
+        sliderPosition = +sliderPosition - 2;
+        shiftBlocks(sliderPosition);
+      }
+    } else {
+      if (sliderPosition != 1) {
+        sliderPosition = +sliderPosition - 1;
+        shiftBlocks(sliderPosition);
+      };
     };
   };
 
   document.querySelector("#arrowRight").addEventListener("click", toRight, false);
 
   function toRight() {
-    if (sliderPosition != document.querySelectorAll(".quotation").length) {
-      sliderPosition = +sliderPosition + 1;
-      shiftBlocks(sliderPosition);
+    if (document.body.clientWidth > 1366) {
+      if (sliderPosition != document.querySelectorAll(".quotation").length - 2) {
+        sliderPosition = +sliderPosition + 2;
+        shiftBlocks(sliderPosition);
+      }
+    } else {
+      if (sliderPosition != document.querySelectorAll(".quotation").length) {
+        sliderPosition = +sliderPosition + 1;
+        shiftBlocks(sliderPosition);
+      };
     };
   };
 
@@ -68,23 +82,3 @@
   }, false);
 
 }());
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// block.style.WebkitTransform = "translate3d(-287px, 0, 0)";
-// document.querySelector(".headerForSmallDevices").style.msTransform = "translate3d(0, 325px, 0)";
-// document.querySelector(".headerForSmallDevices").style.Transform = "translate3d(0, 325px, 0)";
-// document.querySelector(".contentWrapper").style.WebkitTransform = "translate3d(0, 325px, 0)";
-// document.querySelector(".contentWrapper").style.msTransform = "translate3d(0, 325px, 0)";
-// document.querySelector(".contentWrapper").style.Transform = "translate3d(0, 325px, 0)";
