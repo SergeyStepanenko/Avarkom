@@ -54,20 +54,16 @@
   quotationWrapper = document.querySelector(".quotationWrapper");
 
   quotationWrapper.addEventListener('touchstart', function(event) {
-    // event.preventDefault();
-    // event.stopPropagation();
     initialPoint = event.changedTouches[0];
   }, false);
 
   quotationWrapper.addEventListener('touchend', function(event) {
-    // event.preventDefault();
-    // event.stopPropagation();
 
     finalPoint = event.changedTouches[0];
     var xAbs = Math.abs(initialPoint.pageX - finalPoint.pageX);
 
     if (xAbs > 20) {
-        (finalPoint.pageX < initialPoint.pageX) ? toRight() : toLeft();
+        finalPoint.pageX < initialPoint.pageX ? toRight() : toLeft();
     }
   }, false);
 

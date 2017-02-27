@@ -1,6 +1,5 @@
 html {
   font-family: 'Play', sans-serif !important;
-  /*box-sizing: border-box;*/
 }
 body {
   background-color: #FEFEFE;
@@ -62,7 +61,7 @@ body a {
   }
   .logoImg,
   .mnuBtn {
-    margin: 54px 19px;
+    margin: 0 19px;
   }
   .contentWrapper {
     box-sizing: border-box;
@@ -379,6 +378,18 @@ body a {
   .arrow {
     display: none;
   }
+  .hider {
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background-color: #FEFEFE;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
 /*}*/
 
@@ -386,7 +397,8 @@ body a {
   .arrow {
     display: block;
   }
- .header {
+ .header,
+ .hider {
    display: none;
  }
  .menu {
