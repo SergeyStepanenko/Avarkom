@@ -4,74 +4,72 @@
   var blockWidth = document.querySelector(".quotationWidth").clientWidth,
   t1 = "translate3d(",
   t2 = "px, 0, 0)",
-  btn1 = document.querySelector("#btn1"),
-  btn2 = document.querySelector("#btn2"),
-  btn3 = document.querySelector("#btn3"),
-  btn4 = document.querySelector("#btn4"),
-  btn5 = document.querySelector("#btn5"),
-  sliderPosition = 0;
+  sliderPosition = 1;
 
-  document.querySelector("#btn1").onclick = function () {
+  var navigation = document.querySelector(".navigation");
+  navigation.addEventListener("click", handleEvent, false);
 
-    document.querySelector(".quotationWrapper").style.transform = "translate3d(0px, 0, 0)";
-
-    btn1.style.backgroundColor = "#D50821";
-    btn2.style.backgroundColor = "#E9E9E9";
-    btn3.style.backgroundColor = "#E9E9E9";
-    btn4.style.backgroundColor = "#E9E9E9";
-    btn5.style.backgroundColor = "#E9E9E9";
-     sliderPosition = 0;
-  }, false;
-
-  document.querySelector("#btn2").onclick = function () {
-    shiftBlocks(1);
-     sliderPosition = 1;
-  }, false;
-
-  document.querySelector("#btn3").onclick = function () {
-    shiftBlocks(2);
-     sliderPosition = 2;
-  }, false;
-
-  document.querySelector("#btn4").onclick = function () {
-    shiftBlocks(3);
-     sliderPosition = 3;
-  }, false;
-
-  document.querySelector("#btn5").onclick = function () {
-    shiftBlocks(4);
-     sliderPosition = 4;
-  }, false;
-
-  document.querySelector("#arrowLeft").onclick = function () {
-    if (sliderPosition != 0) {
-      shiftBlocks(sliderPosition - 1);
-      sliderPosition = sliderPosition - 1;
-    }
-  }
-
-  document.querySelector("#arrowRight").onclick = function () {
-    if (sliderPosition != document.querySelectorAll(".quotation").length - 1) {
-      shiftBlocks(sliderPosition + 1);
-      sliderPosition = sliderPosition + 1;
-    }
+  function handleEvent(e) {
+      if (e.target !== e.currentTarget) {
+          sliderPosition = e.target.id.replace(/[a-z]/g, "");
+          shiftBlocks(+sliderPosition);
+      }
+      e.stopPropagation();
   }
 
   function shiftBlocks(times) {
     var a = "btn",
     c = ".style.backgroundColor = '#D50821'";
 
-      document.querySelector(".quotationWrapper").style.transform = t1 + -blockWidth * times + t2;
-      // document.querySelector(".quotationWrapper").style.msTransform = t1 + -blockWidth * times + t2;
+      document.querySelector(".quotationWrapper").style.transform = t1 + -blockWidth * (+times - 1) + t2;
 
-      btn1.style.backgroundColor = "#E9E9E9";
-      btn2.style.backgroundColor = "#E9E9E9";
-      btn3.style.backgroundColor = "#E9E9E9";
-      btn4.style.backgroundColor = "#E9E9E9";
-      btn5.style.backgroundColor = "#E9E9E9";
+      for (var i = 0; i < document.querySelectorAll(".btn").length; i++) {
+        document.querySelectorAll(".btn")[i].style.backgroundColor = "#E9E9E9";
+      }
 
-      eval(a + (times + 1) + c);
+      eval(a + times + c);
   };
+
+  document.querySelector("#arrowLeft").addEventListener("click", toLeft, false);
+
+  function toLeft() {
+    if (sliderPosition != 1) {
+      shiftBlocks(+sliderPosition - 1);
+      sliderPosition = +sliderPosition - 1;
+    };
+  };
+
+  document.querySelector("#arrowRight").addEventListener("click", toRight, false);
+
+  function toRight() {
+    if (sliderPosition != document.querySelectorAll(".quotation").length) {
+      shiftBlocks(+sliderPosition + 1);
+      sliderPosition = +sliderPosition + 1;
+    };
+  };
+
+
+  var initialPoint,
+  finalPoint,
+  quotationWrapper = document.querySelector(".quotationWrapper");
+
+  quotationWrapper.addEventListener('touchstart', function(event) {
+    event.preventDefault();
+    event.stopPropagation();
+    initialPoint = event.changedTouches[0];
+  }, false);
+
+  quotationWrapper.addEventListener('touchend', function(event) {
+    event.preventDefault();
+    event.stopPropagation();
+
+    finalPoint = event.changedTouches[0];
+    var xAbs = Math.abs(initialPoint.pageX - finalPoint.pageX);
+
+    if (xAbs > 20) {
+        (finalPoint.pageX < initialPoint.pageX) ? toRight() : toLeft();
+    }
+  }, false);
 
 }());
 
