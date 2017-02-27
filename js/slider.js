@@ -34,8 +34,8 @@
 
   function toLeft() {
     if (sliderPosition != 1) {
-      shiftBlocks(+sliderPosition - 1);
       sliderPosition = +sliderPosition - 1;
+      shiftBlocks(sliderPosition);
     };
   };
 
@@ -43,8 +43,8 @@
 
   function toRight() {
     if (sliderPosition != document.querySelectorAll(".quotation").length) {
-      shiftBlocks(+sliderPosition + 1);
       sliderPosition = +sliderPosition + 1;
+      shiftBlocks(sliderPosition);
     };
   };
 
