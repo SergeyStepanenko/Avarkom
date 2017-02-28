@@ -47,7 +47,7 @@
     closeButton = document.querySelector('.closeButton');
     closeButton.addEventListener('click', closePopUp, false);
     overlay = document.querySelector('.content_1');
-    setTimeout(function addEventListener () {overlay.addEventListener('click', closePopUp, false)}, 1000);
+    setTimeout(function addEventListener () {overlay.addEventListener('click', closePopUp, false)}, 1);
 
     document.querySelector('.inputName').addEventListener('click', resetStyleName, false);
     document.querySelector('.inputPhoneNumber').addEventListener('click', resetStylePhone, false);
