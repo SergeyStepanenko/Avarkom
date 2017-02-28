@@ -40,7 +40,7 @@
         return false;
       });
 
-      // fieldPhone("[name=phone]"); //форматирование номера
+      fieldPhone("[name=phone]"); //форматирование номера
     };
 
     setTimeout(append, 1);
