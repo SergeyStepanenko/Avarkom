@@ -126,7 +126,7 @@ body a {
     border: 2px solid #D80020;
     border-radius: 4px;
     color: #D80020;
-    font-size: 1.4em;
+    font-size: 22px;
     font-weight: bold;
     padding: 8px;
   }
@@ -273,7 +273,7 @@ body a {
     justify-content: center;
     width: 1400px;
     height: 200px;
-    /*transform: translate3d(-280px, 0px, 0px);*/
+    height: 210px;
     transition: all .3s ease-in-out;
   }
   .quotation {
@@ -285,6 +285,9 @@ body a {
     background-color: #FEFEFE;
     box-sizing: border-box;
     margin: 0 5px;
+    -webkit-box-shadow: 1px 2px 1px 0px rgba(0,0,0,0.1);
+    -moz-box-shadow: 1px 2px 1px 0px rgba(0,0,0,0.1);
+    box-shadow: 1px 2px 1px 0px rgba(0,0,0,0.1);
   }
   .quotationInner {
     font-size: 14px;
@@ -410,6 +413,77 @@ body a {
 /*}*/
 
 @media only screen and (min-width : 700px) {
+  .popUpWrapper {
+    position: fixed;
+    top: 200px;
+    z-index: 0;
+    left: 50%;
+    margin-left: -183px;
+  }
+  .popUpContainer {
+    position: relative;
+    width: 366px;
+    height: 366px;
+    background-color: #FEFEFE;
+    margin: 0 auto;
+    border-radius: 15px;
+    z-index: 1000;
+  }
+  .popUpContainerInner {
+    margin: 0px 40px 50px 40px;
+  }
+  .closeButton {
+    display: flex;
+    justify-content: flex-end;
+    color: black;
+    padding: 10px 20px;
+    font-family: monospace;
+    font-size: 20px;
+  }
+  .callMePopUp {
+    display: flex;
+    justify-content: center;
+    margin: 0px 20px -20px 20px;
+    color: #D80020;
+    font-size: 22px;
+    font-weight: bold;
+    padding: 8px;
+  }
+  .popUpText {
+    color: black;
+    margin-top: 24px;
+    text-align: center;
+  }
+  .form {
+    margin: 30px 0 0 0px;
+  }
+  .inputName,
+  .inputPhoneNumber {
+    margin: 11px 0;
+    padding: 7px 15px;
+    border: 1.7px solid #BABABA;
+    width: 286px;
+    box-sizing: border-box;
+    border-radius: 3px;
+    font-size: 16px;
+    color: #BABABA;
+  }
+  .submitData {
+    margin-top: 11px;
+    border: 2px solid #D80020;
+    border-radius: 4px;
+    color: #FEFEFE;
+    background-color: #D80020;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 8px;
+    width: 286px;
+    transition: all .19s ease-in-out;
+  }
+  .submitData:hover {
+    background-color: #C0001C;
+    transition: all .08s ease-in-out;
+  }
   .textUnderHeader {
     font-size: 24px;
   }
@@ -434,6 +508,16 @@ body a {
   }
   .arrow {
     display: block;
+    margin: 0 50px;
+    transition: all .19s ease-in-out;
+  }
+  #arrowLeft:hover {
+    background-image: url(../images/arrowLeft_hover.png);
+    background-repeat: no-repeat;
+  }
+  #arrowRight:hover {
+    background-image: url(../images/arrowRight_hover.png);
+    background-repeat: no-repeat;
   }
  .header,
  .hider {
@@ -475,8 +559,10 @@ body a {
    margin: 15px 0 0 10px;
   }
   .logoCenter {
-    /*position: absolute;*/
+    position: absolute;
     margin: -20px auto 0 auto;
+    left: 50%;
+    margin-left: -50px;
   }
   .menu {
     display: flex;
@@ -528,9 +614,6 @@ body a {
   .blockQuotationsWrapper {
     display: flex;
     align-items: center;
-  }
-  .arrow {
-    margin: 0 50px;
   }
   .arrowImg {
     height: 77px;
@@ -616,9 +699,9 @@ body a {
   .location {
     flex: 1 1 auto;
   }
-  .logoCenter {
+  /*.logoCenter {
     margin-left: 170px;
-  }
+  }*/
   .wrapperH {
     display: flex;
     flex: 1 1 auto;

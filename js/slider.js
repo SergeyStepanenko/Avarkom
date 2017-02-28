@@ -1,7 +1,7 @@
 ; "use strict";
 
 (function sliderAnimation () {
-  var blockWidth = document.querySelector(".quotationWidth").clientWidth,
+  this.blockWidth = document.querySelector(".quotationWidth").clientWidth,
   t1 = "translate3d(",
   t2 = "px, 0, 0)",
   sliderPosition = 1;
@@ -16,12 +16,11 @@
       }
       e.stopPropagation();
   }
-
   function shiftBlocks(times) {
     var a = "btn",
     c = ".style.backgroundColor = '#D50821'";
 
-    document.querySelector(".quotationWrapper").style.transform = t1 + -blockWidth * (+times - 1) + t2;
+    document.querySelector(".quotationWrapper").style.transform = t1 + -this.blockWidth * (+times - 1) + t2;
 
     for (var i = 0; i < document.querySelectorAll(".btn").length; i++) {
       document.querySelectorAll(".btn")[i].style.backgroundColor = "#E9E9E9";
@@ -68,10 +67,15 @@
   quotationWrapper = document.querySelector(".quotationWrapper");
 
   quotationWrapper.addEventListener('touchstart', function(event) {
+    event.preventDefault();
+    event.stopPropagation();
+
     initialPoint = event.changedTouches[0];
   }, false);
 
   quotationWrapper.addEventListener('touchend', function(event) {
+    event.preventDefault();
+    event.stopPropagation();
 
     finalPoint = event.changedTouches[0];
     var xAbs = Math.abs(initialPoint.pageX - finalPoint.pageX);
