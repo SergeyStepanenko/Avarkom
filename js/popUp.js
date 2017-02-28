@@ -35,12 +35,24 @@
     closeButton.addEventListener('click', closePopUp, false);
     overlay = document.querySelector('.content_1');
     setTimeout(function addEventListener () {overlay.addEventListener('click', closePopUp, false)}, 1000);
+
+    document.querySelector('.inputName').addEventListener('click', resetStyleName, false);
+    document.querySelector('.inputPhoneNumber').addEventListener('click', resetStylePhone, false);
   };
 
   function closePopUp () {
     body.removeChild(div);
     closeButton.removeEventListener('click', closePopUp, false);
     overlay.removeEventListener('click', closePopUp, false);
+  };
+
+  function resetStyleName () {
+    document.querySelector('.inputName').value = "";
+    document.querySelector('.inputName').style.color = "black";
+  };
+  function resetStylePhone () {
+   document.querySelector('.inputPhoneNumber').value = "";
+   document.querySelector('.inputPhoneNumber').style.color = "black";
   };
 
 }());
