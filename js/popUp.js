@@ -46,7 +46,7 @@
 
     closeButton = document.querySelector('.closeButton');
     closeButton.addEventListener('click', closePopUp, false);
-    overlay = document.querySelector('.content_1');
+    overlay = document.querySelector('.contentWrapper');
     setTimeout(function addEventListener () {overlay.addEventListener('click', closePopUp, false)}, 1);
 
     document.querySelector('.inputName').addEventListener('click', resetStyleName, false);
