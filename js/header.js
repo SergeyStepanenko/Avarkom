@@ -1,15 +1,16 @@
 ; "use strict";
 
-
-
 (function headerAnimation () {
   var headerStatus = 0,
   header = document.querySelector(".header"),
   headerTop = document.querySelector(".headerTop"),
   dropDownItems = document.querySelector(".dropDownItems");
 
+  this.func = function () {console.log('hi')};
 
-  document.querySelector(".mnuBtn").onclick = function () {
+  document.querySelector(".mnuBtn").addEventListener('click', slide, false);
+
+  function slide () {
     if (headerStatus == 0) {
       header.style.transform = "translate3d(0, 260px, 0)";
       headerTop.style.transform = "translate3d(0, -260px, 0)";
@@ -31,5 +32,7 @@
       // document.querySelector(".contentWrapper").style.Transform = "translate3d(0, 0, 0)";
       headerStatus = 0;
     };
-  }, false;
+  };
+
+
 }());
