@@ -40,7 +40,7 @@
         return false;
       });
 
-      fieldPhone("[name=phone]");
+      // fieldPhone("[name=phone]"); //форматирование номера
     };
 
     setTimeout(append, 1);
@@ -60,7 +60,7 @@
       var customerName = document.querySelector('.inputName').value;
       var customerPhone = document.querySelector('.inputPhoneNumber').value;
 
-      if (customerPhone.length > 11 && customerPhone != '+7 (___) ___-__-__') {
+      if (customerPhone.length > 10 && customerPhone != '+7 (___) ___-__-__') {
         customerPhone = "+"+ customerPhone.replace(/\D+/g,'');
         console.log(customerName);
         console.log(customerPhone);
@@ -90,8 +90,8 @@
   };
 
   function closePopUp () {
-    div != undefined ? body.removeChild(div) : false;
-    popUpCover != undefined ? body.removeChild(popUpCover) : false;
+    div != undefined ? body.removeChild(div) : "";
+    popUpCover != undefined ? body.removeChild(popUpCover) : "";
 
     closeButton.removeEventListener('click', closePopUp, false);
     overlay.removeEventListener('click', closePopUp, false);
