@@ -60,10 +60,10 @@
       var customerName = document.querySelector('.inputName').value;
       var customerPhone = document.querySelector('.inputPhoneNumber').value;
 
-      if (customerPhone.length > 10 && customerPhone != '+7 (___) ___-__-__') {
+      if (customerPhone.length > 9 && customerPhone != '+7 (___) ___-__-__') {
         customerPhone = "+"+ customerPhone.replace(/\D+/g,'');
-        console.log(customerName);
-        console.log(customerPhone);
+        console.log("customerName " + customerName);
+        console.log("customerPhone " + customerPhone);
 
         popUpCover = document.createElement('div');
 
