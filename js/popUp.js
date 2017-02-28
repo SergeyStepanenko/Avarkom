@@ -2,7 +2,9 @@
 
 (function popUp () {
   var div = document.createElement('div'),
-  body = document.querySelector("body");
+  body = document.querySelector("body"),
+  popUpCover,
+  closeButton2;
 
   div.className = "popUpWrapper";
   div.innerHTML = "\
@@ -45,24 +47,58 @@
 
 
     closeButton = document.querySelector('.closeButton');
+
     closeButton.addEventListener('click', closePopUp, false);
+
     overlay = document.querySelector('.contentWrapper');
     setTimeout(function addEventListener () {overlay.addEventListener('click', closePopUp, false)}, 1);
 
     document.querySelector('.inputName').addEventListener('click', resetStyleName, false);
     document.querySelector('.inputPhoneNumber').addEventListener('click', resetStylePhone, false);
 
+    document.querySelector('.submitData').onclick = function () {
+      var customerName = document.querySelector('.inputName').value;
+      var customerPhone = document.querySelector('.inputPhoneNumber').value;
+
+      if (customerPhone.length > 11 && customerPhone != '+7 (___) ___-__-__') {
+        customerPhone = "+"+ customerPhone.replace(/\D+/g,'');
+        console.log(customerName);
+        console.log(customerPhone);
+
+        popUpCover = document.createElement('div');
+
+        popUpCover.className = "popUpWrapper";
+        popUpCover.innerHTML = "\
+            <div class = 'popUpContainer'>\
+                <a class = 'closeButton2'>x</a>\
+                  <div class = 'popUpContainerInner'>\
+                    <div class = 'callMePopUpCover'>Ваша заявка принята</div>\
+                    <div class = 'popUpText'>Уже набираем ваш номер!</div>\
+                    </div>\
+                  </div>\
+                </div>";
+
+        body.appendChild(popUpCover);
+        closeButton2 = document.querySelector('.closeButton2');
+        setTimeout(function addEventListener () {closeButton2.addEventListener('click', closePopUp, false)}, 1);
+      } else {
+        function shakeInputBlock() {
+          //add Effect Here
+        }
+      }
+    };
   };
 
   function closePopUp () {
-    body.removeChild(div);
+    div != undefined ? body.removeChild(div) : false;
+    popUpCover != undefined ? body.removeChild(popUpCover) : false;
+
     closeButton.removeEventListener('click', closePopUp, false);
     overlay.removeEventListener('click', closePopUp, false);
 
   };
 
   function resetStyleName () {
-
     if (document.querySelector('.inputName').value == 'Введите ваше имя') {
       document.querySelector('.inputName').value = "";
     };
@@ -75,7 +111,4 @@
       document.querySelector('.inputPhoneNumber').style.color = "black";
     };
   };
-
-
-
 }());
