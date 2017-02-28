@@ -484,6 +484,7 @@ body a {
     left: 50%;
     margin-left: -150px;
     z-index: 1000;
+    top: 10px;
   }
   .popUpContainer {
     width: 300px;
