@@ -36,10 +36,16 @@
       if (sliderPosition != 1) {
         sliderPosition = +sliderPosition - 2;
         shiftBlocks(sliderPosition);
-      }
+      } else {
+        sliderPosition = document.querySelectorAll(".quotation").length - 2;
+        shiftBlocks(sliderPosition);
+      };
     } else {
       if (sliderPosition != 1) {
         sliderPosition = +sliderPosition - 1;
+        shiftBlocks(sliderPosition);
+      } else {
+        sliderPosition = document.querySelectorAll(".quotation").length;
         shiftBlocks(sliderPosition);
       };
     };
@@ -52,10 +58,16 @@
       if (sliderPosition != document.querySelectorAll(".quotation").length - 2) {
         sliderPosition = +sliderPosition + 2;
         shiftBlocks(sliderPosition);
-      }
+      } else {
+        sliderPosition = 1;
+        shiftBlocks(sliderPosition);
+      };
     } else {
       if (sliderPosition != document.querySelectorAll(".quotation").length) {
         sliderPosition = +sliderPosition + 1;
+        shiftBlocks(sliderPosition);
+      } else {
+        sliderPosition = 1;
         shiftBlocks(sliderPosition);
       };
     };

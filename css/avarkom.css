@@ -271,9 +271,11 @@ body a {
     display: flex;
     justify-content: center;
     width: 1400px;
-    height: 200px;
     height: 210px;
     transition: all .3s ease-in-out;
+  }
+  .quotationWidth {
+    /*transition: all .3s ease-in-out;*/
   }
   .quotation {
     position: relative;
