@@ -1,5 +1,8 @@
 ; "use strict";
 
+// window.onresize = function(){ location.reload(); }
+
+
 (function(){  // анонимная функция (function(){ })(), чтобы переменные "a" и "b" не стали глобальными
   var a = document.querySelector('#aside1'), b = null;  // селектор блока, который нужно закрепить
   window.addEventListener('scroll', Ascroll, false);
