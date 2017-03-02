@@ -319,18 +319,18 @@ d.addEventListener("DOMContentLoaded", f, false);
 //refreshes page whenever its width is changed
 
 (function () {
-	var screenSizeBeforeResize,
+	var screenSizeBeforeResize = screenSizeAfterResize,
 	screenSizeAfterResize;
 
 	$(window).bind('resize', function(e) {
 	  if (window.RT) clearTimeout(window.RT);
 	  window.RT = setTimeout(function() {
+			screenSizeBeforeResize = screenSizeAfterResize;
+			screenSizeAfterResize = document.body.clientWidth;
+			console.log("screenSizeBeforeResize " + screenSizeBeforeResize);
 
-			screenSizeBeforeResize = document.body.clientWidth;
-			console.log(screenSizeBeforeResize + " " + screenSizeAfterResize);
-
-
-	    // this.location.reload(false); /* false to get page from cache */
+			console.log("screenSizeAfterResize " + screenSizeAfterResize);
+	    this.location.reload(false); /* false to get page from cache */
 
 	  }, 100);
 	});
