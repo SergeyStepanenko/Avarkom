@@ -319,7 +319,7 @@ d.addEventListener("DOMContentLoaded", f, false);
 //refreshes page whenever its width is changed
 
 (function () {
-	var screenSize = document.body.clientWidth, currentSize, landingViewOld, landingViewNew;
+	var screenSize = document.body.clientWidth + 17, currentSize, landingViewOld, landingViewNew;
 	if (screenSize < 700) {
 		landingViewOld = "small";
 	} else if (screenSize > 700 && screenSize < 1365) {
@@ -327,6 +327,8 @@ d.addEventListener("DOMContentLoaded", f, false);
 	} else if (screenSize > 1365) {
 		landingViewOld = "large";
 	}
+
+	console.log(screenSize);
 
 	$(window).bind('resize', function(e) {
 	  if (window.RT) clearTimeout(window.RT);
