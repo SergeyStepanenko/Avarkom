@@ -1,8 +1,5 @@
 ; "use strict";
 
-// window.onresize = function(){ location.reload(); }
-
-
 (function(){  // анонимная функция (function(){ })(), чтобы переменные "a" и "b" не стали глобальными
   var a = document.querySelector('#aside1'), b = null;  // селектор блока, который нужно закрепить
   window.addEventListener('scroll', Ascroll, false);
@@ -16,13 +13,16 @@
         }
       }
       b = document.createElement('div');  // создать потомка
-      b.style.cssText = s + ' box-sizing: border-box; width: ' + a.offsetWidth + 'px;';
+      // b.style.cssText = s + ' box-sizing: border-box; width: ' + a.offsetWidth + 'px;';
+      b.style.cssText = s + ' box-sizing: border-box; width: 100%;';
+
       a.insertBefore(b, a.firstChild);  // поместить потомка в цепляющийся блок
       var l = a.childNodes.length;
       for (var i = 1; i < l; i++) {  // переместить во вновь созданного потомка всех остальных потомков плавающего блока (итого: создан потомок-обёртка)
         b.appendChild(a.childNodes[1]);
       }
-      a.style.height = b.getBoundingClientRect().height + 'px';  // если под скользящим элементом есть другие блоки, можно своё значение
+      // a.style.height = b.getBoundingClientRect().height + 'px';  // если под скользящим элементом есть другие блоки, можно своё значение
+      a.style.height = 'auto'; //своё значение
       a.style.padding = '0';
       a.style.border = '0';  // если элементу присвоен padding или border
     }
@@ -31,8 +31,8 @@
     } else {
       b.className = '';
     }
-    window.addEventListener('resize', function() {
-      a.children[0].style.width = getComputedStyle(a, '').width
-    }, false);  // если изменить размер окна браузера, измениться ширина элемента
+    // window.addEventListener('resize', function() {
+    //   a.children[0].style.width = getComputedStyle(a, '').width
+    // }, false);  // если изменить размер окна браузера, измениться ширина элемента
   }
-})();
+})()

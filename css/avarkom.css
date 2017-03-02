@@ -276,7 +276,7 @@ body a {
   }
   .sticky {
     position: fixed;
-    top: 0px;  /* если ноль заменить на число (и в скрипте тоже), то блок будет прилипать до того, как верхний край окна браузера дойдёт до верхнего края элемента. Может быть отрицательным числом. Применим, например, при фиксированном сверху меню */
+    top: 0px;
     z-index: 101;
   }
   .quotation {
@@ -503,6 +503,13 @@ body a {
     background-color: #C0001C;
     transition: all .08s ease-in-out;
   }
+@media only screen and (min-width : 321) {
+ .sticky {
+     position: fixed;
+     top: 0px;
+     z-index: 101;
+ }
+}
 @media only screen and (max-width : 400px) {
   .popUpWrapper {
     left: 50%;
@@ -520,12 +527,18 @@ body a {
     width: 266px;
   }
 }
-@media only screen and (max-width : 768px) {
+@media only screen and (max-width : 700px) {
   .popUpWrapper {
     top: 10px;
   }
 }
 @media only screen and (min-width : 700px) {
+  .callBeBackBtnWrapper {
+    margin-top: 0px;
+  }
+  .sticky {
+    top: -63px;  /* если ноль заменить на число (и в скрипте тоже), то блок будет прилипать до того, как верхний край окна браузера дойдёт до верхнего края элемента. Может быть отрицательным числом. Применим, например, при фиксированном сверху меню */
+  }
   .textUnderHeader {
     font-size: 24px;
   }
@@ -701,8 +714,10 @@ body a {
     background-color: #C0001C;
   }
 }
-
 @media only screen and (min-width : 1366px) {
+  .sticky {
+    top: 0px;  /* если ноль заменить на число (и в скрипте тоже), то блок будет прилипать до того, как верхний край окна браузера дойдёт до верхнего края элемента. Может быть отрицательным числом. Применим, например, при фиксированном сверху меню */
+  }
   .textUnderHeader {
     font-size: 24px;
   }

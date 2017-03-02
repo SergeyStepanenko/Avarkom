@@ -2,8 +2,6 @@
 
 (function sliderAnimation () {
   this.blockWidth = document.querySelector(".quotationWidth").clientWidth,
-  t1 = "translate3d(",
-  t2 = "px, 0, 0)",
   sliderPosition = 1;
 
   var navigation = document.querySelector(".navigation");
@@ -20,7 +18,7 @@
     var a = "btn",
     c = ".style.backgroundColor = '#D50821'";
 
-    document.querySelector(".quotationWrapper").style.transform = t1 + -this.blockWidth * (+times - 1) + t2;
+    document.querySelector(".quotationWrapper").style.transform = "translate3d(" + -this.blockWidth * (+times - 1) + "px, 0, 0)";
 
     for (var i = 0; i < document.querySelectorAll(".btn").length; i++) {
       document.querySelectorAll(".btn")[i].style.backgroundColor = "#E9E9E9";
