@@ -33,8 +33,8 @@
         b.className = '';
       }
       window.addEventListener('resize', function() {
-        // a.children[0].style.width = getComputedStyle(a, '').width
-        // a.style.height = b.getBoundingClientRect().height + 'px';  // если под скользящим элементом есть другие блоки, можно своё значение
+        a.children[0].style.width = getComputedStyle(a, '').width
+        a.style.height = b.getBoundingClientRect().height + 'px';  // если под скользящим элементом есть другие блоки, можно своё значение
 
       }, false);  // если изменить размер окна браузера, измениться ширина элемента
     }
