@@ -318,26 +318,23 @@ d.addEventListener("DOMContentLoaded", f, false);
 
 //refreshes page whenever its width is changed
 
-// (function () {
-// 	var screenSize = document.body.clientWidth,
-// 	screenSizeAfterResize;
-//
-//
-// 	if (document.body.clientWidth > 320) {
-// 		$(window).bind('resize', function(e) {
-// 		  if (window.RT) clearTimeout(window.RT);
-// 		  window.RT = setTimeout(function()
-// 		  {
-//
-// 				screenSizeAfterResize = document.body.clientWidth;
-// 				console.log(screenSize + " " + screenSizeAfterResize);
-// 		    // this.location.reload(false); /* false to get page from cache */
-// 		  }, 100);
-// 		});
-// 	}
-// })();
+(function () {
+	var screenSizeBeforeResize,
+	screenSizeAfterResize;
+
+	$(window).bind('resize', function(e) {
+	  if (window.RT) clearTimeout(window.RT);
+	  window.RT = setTimeout(function() {
+
+			screenSizeBeforeResize = document.body.clientWidth;
+			console.log(screenSizeBeforeResize + " " + screenSizeAfterResize);
 
 
+	    // this.location.reload(false); /* false to get page from cache */
+
+	  }, 100);
+	});
+})();
 
 
 
