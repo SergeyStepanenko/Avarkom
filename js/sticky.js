@@ -1,5 +1,38 @@
 ; "use strict";
 
+//refreshes page whenever its width is changed
+
+(function () {
+	var screenSize = document.body.clientWidth + 17, currentSize, landingViewOld, landingViewNew;
+	if (screenSize < 700) {
+		landingViewOld = "small";
+	} else if (screenSize > 700 && screenSize < 1365) {
+		landingViewOld = "medium";
+	} else if (screenSize > 1365) {
+		landingViewOld = "large";
+	}
+
+	console.log(screenSize);
+
+  window.addEventListener('resize', function() {
+	  if (window.RT) clearTimeout(window.RT);
+	  window.RT = setTimeout(function() {
+			currentSize = document.body.clientWidth;
+			if (currentSize < 700) {
+				landingViewNew = "small";
+			} else if (currentSize > 700 && currentSize < 1365) {
+				landingViewNew = "medium";
+			} else if (currentSize > 1365) {
+				landingViewNew = "large";
+			}
+			if (landingViewOld != landingViewNew) {
+				this.location.reload(false); /* false to get page from cache */
+			};
+			landingViewOld = landingViewNew;
+	  }, 100);
+	});
+})();
+
 (function(){  // анонимная функция (function(){ })(), чтобы переменные "a" и "b" не стали глобальными
   if (document.body.clientWidth > 320) {
     var a = document.querySelector('#aside1'), b = null, c = document.querySelector('.onTop768px');  // селектор блока, который нужно закрепить
@@ -27,7 +60,20 @@
         a.style.padding = '0';
         a.style.border = '0';  // если элементу присвоен padding или border
       }
-      if (a.getBoundingClientRect().top <= 0) { // elem.getBoundingClientRect() возвращает в px координаты элемента относительно верхнего левого угла области просмотра окна браузера
+
+      if (true) {
+        var screenSize = document.body.clientWidth + 17;
+        console.log(screenSize);
+      	if (screenSize > 700 && screenSize < 1365) {
+          var marginTop = -63;
+      	} else if (screenSize > 1366) {
+      		 marginTop = 0;
+      	} else if (screenSize < 699) {
+      		marginTop = 0;
+      	}
+      };
+
+      if (a.getBoundingClientRect().top <= marginTop) { // elem.getBoundingClientRect() возвращает в px координаты элемента относительно верхнего левого угла области просмотра окна браузера
         b.className = 'sticky';
       } else {
         b.className = '';

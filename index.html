@@ -314,46 +314,5 @@ d.addEventListener("DOMContentLoaded", f, false);
 <!--Yandex.Metrika counter-->
 
 <script language="Javascript" type="text/javascript" src="js/latest.js"></script>
-<script>
-
-//refreshes page whenever its width is changed
-
-(function () {
-	var screenSize = document.body.clientWidth + 17, currentSize, landingViewOld, landingViewNew;
-	if (screenSize < 700) {
-		landingViewOld = "small";
-	} else if (screenSize > 700 && screenSize < 1365) {
-		landingViewOld = "medium";
-	} else if (screenSize > 1365) {
-		landingViewOld = "large";
-	}
-
-	console.log(screenSize);
-
-	$(window).bind('resize', function(e) {
-	  if (window.RT) clearTimeout(window.RT);
-	  window.RT = setTimeout(function() {
-			currentSize = document.body.clientWidth;
-			if (currentSize < 700) {
-				landingViewNew = "small";
-			} else if (currentSize > 700 && currentSize < 1365) {
-				landingViewNew = "medium";
-			} else if (currentSize > 1365) {
-				landingViewNew = "large";
-			}
-			console.log("old " + landingViewOld);
-			console.log("new " + landingViewNew);
-
-			if (landingViewOld != landingViewNew) {
-				this.location.reload(false); /* false to get page from cache */
-			};
-			landingViewOld = landingViewNew;
-	  }, 100);
-	});
-})();
-
-
-
-</script>
 </body>
 </html>
