@@ -34,7 +34,7 @@
 })();
 
 (function(){  // анонимная функция (function(){ })(), чтобы переменные "a" и "b" не стали глобальными
-  if (document.body.clientWidth > 320) {
+  if (document.body.clientWidth > 700) {
     var a = document.querySelector('#aside1'), b = null, c = document.querySelector('.onTop768px');  // селектор блока, который нужно закрепить
     window.addEventListener('scroll', Ascroll, false);
     document.body.addEventListener('scroll', Ascroll, false);  // если у html и body высота равна 100%
@@ -63,7 +63,7 @@
 
       if (true) {
         var screenSize = document.body.clientWidth + 17;
-        console.log(screenSize);
+        
       	if (screenSize > 700 && screenSize < 1365) {
           var marginTop = -63;
       	} else if (screenSize > 1366) {
