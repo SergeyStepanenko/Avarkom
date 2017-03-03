@@ -14,7 +14,7 @@ body a {
   max-width: 1920px;
   min-height: 1080px;
   /*background-image: url(../images/dtpbackground.png);*/
-  background-image: url(../app/images/dtpbackground.png);
+  background-image: url(../app/images/dtpBackground.png);
   background-position: top;
   background-size: 2520px;
   background-repeat: no-repeat;
@@ -22,7 +22,8 @@ body a {
 }
 .bkgImg {
   height: 500px;
-  background-image: url(../images/bkg2.png);
+  /*background-image: url(../images/bkg2.png);*/
+  background-image: url(../app/images/bkg2.png);
   background-size: 700px 500px;
   background-repeat: no-repeat;
   background-position: left;
