@@ -5,8 +5,16 @@ var gulp = require('gulp'),
     concat = require('gulp-concat'),
     uglify = require('gulp-uglify');
     browserSync = require('browser-sync'),
-    cssnano = require('gulp-cssnano');
-    // scripts = require('gulp-scripts');
+    cssnano = require('gulp-cssnano'),
+    importCss = require('gulp-import-css');
+
+gulp.task('css-import-nano', function () {
+  gulp.src('app/css/avarkom.css')
+    .pipe(importCss())
+    .pipe(cssnano())
+    .pipe(gulp.dest('app'))
+    .pipe(browserSync.reload({stream: true}))
+});
 
 gulp.task('sass', function() {
   return gulp.src('app/sass/*.sass')
@@ -14,37 +22,25 @@ gulp.task('sass', function() {
   .pipe(gulp.dest('app'))
 });
 
-gulp.task('css-libs', function() {
-  return gulp.src('app/css/*.css')
-  .pipe(cssnano())
-  .pipe(gulp.dest('app/css'));
-});
-
 gulp.task('scripts', function() {
-    return gulp.src('app/js/*.js')
-        .pipe(concat('libs.min.js')) // Собираем их в кучу в новом файле libs.min.js
-        .pipe(uglify()) // Сжимаем JS файл
-        .pipe(gulp.dest('app')); // Выгружаем в папку app/js
+  return gulp.src('app/js/*.js')
+    .pipe(concat('libs.min.js')) // Собираем их в кучу в новом файле libs.min.js
+    .pipe(uglify()) // Сжимаем JS файл
+    .pipe(gulp.dest('app')) // Выгружаем в папку app/js
+    .pipe(browserSync.reload({stream: true}))
 });
 
-//
-// gulp.task('browser-sync', function() {
-//   browserSync({
-//     server: {
-//       baseDir: 'app'
-//     },
-//     notify: false
-//   });
-// });
-//
-// gulp.task('watch', function() {
-//   gulp.watch('app/*.html', browserSync.reload);
-//   gulp.watch('app/js/*.js', browserSync.reload);
-// })
+gulp.task('browser-sync', function() {
+  browserSync({
+    server: {
+      baseDir: 'app'
+    },
+    notify: true
+  });
+});
 
-
-// gulp.task('mytask', function() {
-//   return gulp.src('source-files') //берем файл
-//   .pipe(plugin()) //что-то делаем с ним
-//   .pipe(gulp.dest('folder')) // выводим результат
-// });
+gulp.task('watch', ['browser-sync', 'css-import-nano', 'scripts'], function() {
+  gulp.watch('app/css/*.css', ['css-import-nano'])
+  gulp.watch('app/*.html', browserSync.reload)
+  gulp.watch('app/js/*.js', ['scripts'])
+});

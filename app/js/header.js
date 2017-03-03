@@ -14,6 +14,7 @@
     if (headerStatus == 0) {
       header.style.transform = "translate3d(0, 260px, 0)";
       headerTop.style.transform = "translate3d(0, -260px, 0)";
+      
       // dropDownItems.style.display = "block";
       // document.querySelector(".headerForSmallDevices").style.msTransform = "translate3d(0, 325px, 0)";
       // document.querySelector(".headerForSmallDevices").style.Transform = "translate3d(0, 325px, 0)";
