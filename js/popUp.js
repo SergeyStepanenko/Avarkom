@@ -17,7 +17,7 @@
   							<form action='' id='myForm' method>\
                   <input class='inputName' name='name' value='Введите ваше имя'>\
   								<input class='inputPhoneNumber' name='phone' value='+7 (___) ___-__-__'>\
-  								<input class='submitData' type='submit' value='Отправить'>\
+  								<input class='submitData' onsubmit='yaCounter43150839.reachGoal(\"sendtrue\"); return true;' type='submit' value='Отправить' >\
   							</form>\
   		        </div>\
   		      </div>\
