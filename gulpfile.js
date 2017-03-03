@@ -7,12 +7,13 @@ var gulp = require('gulp'),
     browserSync = require('browser-sync'),
     cssnano = require('gulp-cssnano'),
     importCss = require('gulp-import-css'),
-    gulpCopy = require('gulp-copy');
+    imagemin = require('gulp-imagemin');
 
-// gulp.task('copy', function () {
-//   gulp.src('app/index.html')
-//     .pipe(gulp.dest(''))
-// });
+gulp.task('imagemin', () =>
+    gulp.src('images/*')
+        .pipe(imagemin())
+        .pipe(gulp.dest('dist/images'))
+);
 
 gulp.task('css-import-nano', function () {
   gulp.src('css/avarkom.css')
