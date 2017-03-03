@@ -13,7 +13,8 @@ body a {
 .contentWrapper {
   max-width: 1920px;
   min-height: 1080px;
-  background-image: url(../images/dtpbackground.png);
+  /*background-image: url(../images/dtpbackground.png);*/
+  background-image: url(../app/images/dtpbackground.png);
   background-position: top;
   background-size: 2520px;
   background-repeat: no-repeat;
