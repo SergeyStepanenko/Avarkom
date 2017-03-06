@@ -60,9 +60,20 @@
       var customerPhone = document.querySelector('.inputPhoneNumber').value;
 
       if (customerPhone.length > 9 && customerPhone != '+7 (___) ___-__-__') {
-        customerPhone = "+"+ customerPhone.replace(/\D+/g,'');
-        console.log("customerName " + customerName);
-        console.log("customerPhone " + customerPhone);
+        customerPhone = "+" + customerPhone.replace(/\D+/g,'');
+        customerName == "Введите ваше имя" ? customerName = "" : customerName;
+
+        var now = new Date();
+        now.getDate();
+
+        function writeUserData(name, phone) { 
+          firebase.database().ref('callers/' + now).set({
+            username: name,
+            phone: phone,
+          });
+        }
+
+        writeUserData(customerName, customerPhone); //отправляем данные в базу firebase
 
         popUpCover = document.createElement('div');
 

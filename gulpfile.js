@@ -46,7 +46,7 @@ gulp.task('browser-sync', function() {
   });
 });
 
-gulp.task('watch', ['browser-sync', 'css-import-nano', 'scripts'], function() {
+gulp.task('default', ['browser-sync', 'css-import-nano', 'scripts'], function() {
   gulp.watch('css/*.css', ['css-import-nano'])
   gulp.watch('*.html', browserSync.reload)
   gulp.watch('js/*.js', ['scripts'])

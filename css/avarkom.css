@@ -12,8 +12,9 @@ body a {
 .contentWrapper {
   max-width: 1920px;
   min-height: 1080px;
-  background-image: url(../app/images/dtpBackground.jpg);
-  background-image: url(images/dtpBackground.jpg);
+  background-image: url(../images/dtpBackground.jpg);
+  /*background-image: url(../app/images/dtpBackground.jpg);
+  background-image: url(images/dtpBackground.jpg);*/
   background-position: top;
   background-size: 2520px;
   background-repeat: no-repeat;
@@ -21,8 +22,9 @@ body a {
 }
 .bkgImg {
   height: 500px;
-  background-image: url(../app/images/bkg2.jpg);
-  background-image: url(images/bkg2.jpg);
+  background-image: url(../images/bkg2.jpg);
+  /*background-image: url(../app/images/bkg2.jpg);
+  background-image: url(images/bkg2.jpg);*/
   background-size: 700px 500px;
   background-repeat: no-repeat;
   background-position: left;
