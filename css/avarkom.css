@@ -495,19 +495,19 @@ body a {
   }
   .submitData {
     margin-top: 11px;
-    border: 2px solid #D80020;
+    border: 2px solid #EAEAEA;
     border-radius: 4px;
     color: #FEFEFE;
-    background-color: #D80020;
+    background-color: #EAEAEA;
     font-size: 20px;
     font-weight: bold;
     padding: 8px;
     width: 100%;
     transition: all .19s ease-in-out;
   }
-  .submitData:hover {
-    background-color: #C0001C;
-    transition: all .08s ease-in-out;
+  /*.submitData:hover {
+    background-color: #C0001C !important;
+    transition: all .08s ease-in-out;*/
   }
 @media only screen and (min-width : 321) {
  .sticky {

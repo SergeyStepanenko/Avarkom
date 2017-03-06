@@ -64,9 +64,8 @@
         customerName == "Введите ваше имя" ? customerName = "" : customerName;
 
         var now = new Date();
-        now.getDate();
 
-        function writeUserData(name, phone) { 
+        function writeUserData(name, phone) {
           firebase.database().ref('callers/' + now).set({
             username: name,
             phone: phone,
