@@ -53,7 +53,7 @@
     setTimeout(function addEventListener () {overlay.addEventListener('click', closePopUp, false)}, 1);
 
     document.querySelector('.inputName').addEventListener('click', resetStyleName, false);
-    document.querySelector('.inputPhoneNumber').addEventListener('click', resetStylePhone, false);
+    document.querySelector('.inputPhoneNumber').addEventListener('onmouseover', resetStylePhone, false);
 
     document.querySelector('.submitData').onclick = function () {
       var customerName = document.querySelector('.inputName').value;
@@ -64,6 +64,7 @@
         customerName == "Введите ваше имя" ? customerName = "" : customerName;
 
         var now = new Date();
+        now.getDate();
 
         function writeUserData(name, phone) {
           firebase.database().ref('callers/' + now).set({
@@ -115,6 +116,7 @@
     document.querySelector('.inputName').style.color = "black";
   };
   function resetStylePhone () {
+    console.log("focus");
     if (document.querySelector('.inputPhoneNumber').value == '+7 (___) ___-__-__') {
       document.querySelector('.inputPhoneNumber').value = "";
       document.querySelector('.inputPhoneNumber').style.color = "black";

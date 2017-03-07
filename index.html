@@ -10,7 +10,7 @@
 	<link href="images/avarkom.ico" rel="shortcut icon" type="image/png" />
 	<link href="https://fonts.googleapis.com/css?family=Play:400,700&amp;subset=cyrillic" rel="stylesheet">
 	<!-- <link rel="stylesheet" href="avarkom.css"> -->
-	
+
 	<link rel="stylesheet" href="css/avarkom.css">
 	<link rel="stylesheet" href="css/reset.css">
 
@@ -277,6 +277,12 @@
 	</div>
 
 
+	<form method="POST" action="http://formspree.io/grover2006@yandex.ru">
+	  <input type="name" name="name" placeholder="Your name">
+	  <textarea name="phone" placeholder="Your phone"></textarea>
+	  <button type="submit">Send</button>
+	</form>
+
 	<!-- Firebase -------------------------------------------->
 	<script src="https://www.gstatic.com/firebasejs/3.7.0/firebase.js"></script>
 	<script>
@@ -289,6 +295,12 @@
 	    messagingSenderId: "248828321156"
 	  };
 	  firebase.initializeApp(config);
+
+		var app = firebase.initializeApp(config);
+  	var auth = app.auth();
+		function handleEmail(auth, actionCode) {
+
+		}
 	</script>
 	<!-- Firebase -------------------------------------------->
 
