@@ -14,9 +14,9 @@
   						<div class = 'callMePopUp'>Перезвоните мне</div>\
   						<div class = 'popUpText'>Введите свое имя и номер телефона и мы сразу же перезвоним</div>\
   						<div class = 'form'>\
-  							<form action='php/index.php' id='myForm' method>\
-                  <input class='inputName' name='name' value='Введите ваше имя'>\
-  								<input class='inputPhoneNumber' name='phone' value='+7 (___) ___-__-__'>\
+  							<form action='mail/index.php' id='myForm' method='post'>\
+                  <input class='inputName' name='name' placeholder='Введите ваше имя' value=''>\
+  								<input class='inputPhoneNumber' placeholder='Ваш телефон' name='phone' value=''>\
   								<input class='submitData' onsubmit='yaCounter43150839.reachGoal(\"sendtrue\"); return true;' type='submit' value='Отправить' >\
   							</form>\
   		        </div>\
