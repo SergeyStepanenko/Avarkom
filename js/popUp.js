@@ -33,7 +33,7 @@
   function appendChild () {
     body.appendChild(overlayPopUp);
     body.appendChild(div);
-    document.querySelector('body').style.overflow = "hidden";
+    body.style.overflow = "hidden";
     function append () {
       body.appendChild(div);
       $("#myForm").submit(function(){
@@ -109,7 +109,7 @@
     closeButton.removeEventListener('click', closePopUp, false);
     overlay.removeEventListener('click', closePopUp, false);
 
-    document.querySelector('body').style.overflow = "auto";
+    body.style.overflow = "auto";
   };
 
   function resetStyleName () {
