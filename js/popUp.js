@@ -2,9 +2,12 @@
 
 (function popUp () {
   var div = document.createElement('div'),
-  body = document.querySelector("body"),
+     body = document.querySelector("body"),
+    overlayPopUp = document.createElement('div'),
   popUpCover,
   closeButton2;
+
+  overlayPopUp.className = "overlayPopUp";
 
   div.className = "popUpWrapper";
   div.innerHTML = "\
@@ -28,7 +31,9 @@
   document.querySelectorAll('.callMe')[1].addEventListener('click', appendChild, false);
 
   function appendChild () {
+    body.appendChild(overlayPopUp);
     body.appendChild(div);
+    body.style.overflow = "hidden";
     function append () {
       body.appendChild(div);
       $("#myForm").submit(function(){
@@ -57,12 +62,10 @@
 
     setTimeout(append, 1);
 
-
     closeButton = document.querySelector('.closeButton');
-
     closeButton.addEventListener('click', closePopUp, false);
 
-    overlay = document.querySelector('.contentWrapper');
+    overlay = document.querySelector('.overlayPopUp');
     setTimeout(function addEventListener () {overlay.addEventListener('click', closePopUp, false)}, 1);
 
     document.querySelector('.inputName').addEventListener('click', resetStyleName, false);
@@ -77,7 +80,6 @@
         customerName == "Введите ваше имя" ? customerName = "" : customerName;
 
         var now = new Date();
-        now.getDate();
 
         function writeUserData(name, phone) {
           firebase.database().ref('callers/' + now).set({
@@ -115,10 +117,12 @@
   function closePopUp () {
     div != undefined ? body.removeChild(div) : "";
     popUpCover != undefined ? body.removeChild(popUpCover) : "";
+    overlayPopUp != undefined ? body.removeChild(overlayPopUp) : "";
 
     closeButton.removeEventListener('click', closePopUp, false);
     overlay.removeEventListener('click', closePopUp, false);
 
+    body.style.overflow = "auto";
   };
 
   function resetStyleName () {
