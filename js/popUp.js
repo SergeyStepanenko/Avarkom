@@ -36,6 +36,19 @@
 
         error += $(this).yaproField("phone", "p", "телефон введен неправильно");
 
+        var data = $("#myForm").serialize();
+
+        debugger;
+
+        $.ajax({
+          type: "POST",
+          url: 'mail/index.php',
+          data: data,
+          success: function() {
+            // показать окно об успешной отправке и закрыть после
+          }, 
+        });
+
         return false;
       });
 
