@@ -34,6 +34,7 @@
     body.appendChild(overlayPopUp);
     body.appendChild(div);
     body.style.overflow = "hidden";
+
     function append () {
       body.appendChild(div);
       $("#myForm").submit(function(){
