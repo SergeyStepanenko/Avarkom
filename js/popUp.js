@@ -2,10 +2,10 @@
 
 (function popUp () {
   var div = document.createElement('div'),
-      body = document.querySelector("body"),
-      overlayPopUp = document.createElement('div'),
-      popUpCover,
-      closeButton2;
+     body = document.querySelector("body"),
+    overlayPopUp = document.createElement('div'),
+  popUpCover,
+  closeButton2;
 
   overlayPopUp.className = "overlayPopUp";
 
@@ -41,6 +41,17 @@
         var error = "";
 
         error += $(this).yaproField("phone", "p", "телефон введен неправильно");
+
+        var data = $("#myForm").serialize();
+
+        $.ajax({
+          type: "POST",
+          url: 'mail/index.php',
+          data: data,
+          success: function() {
+            // показать окно об успешной отправке и закрыть после
+          },
+        });
 
         return false;
       });
@@ -94,14 +105,18 @@
         body.appendChild(popUpCover);
         closeButton2 = document.querySelector('.closeButton2');
         setTimeout(function addEventListener () {closeButton2.addEventListener('click', closePopUp, false)}, 1);
-      };
+      } else {
+        function shakeInputBlock() {
+          //add Effect Here
+        }
+      }
     };
   };
 
   function closePopUp () {
-    (div != undefined) ? body.removeChild(div) : "";
-    (popUpCover != undefined) ? body.removeChild(popUpCover) : "";
-    (overlayPopUp != undefined) ? body.removeChild(overlayPopUp) : "";
+    div != undefined ? body.removeChild(div) : "";
+    popUpCover != undefined ? body.removeChild(popUpCover) : "";
+    overlayPopUp != undefined ? body.removeChild(overlayPopUp) : "";
 
     closeButton.removeEventListener('click', closePopUp, false);
     overlay.removeEventListener('click', closePopUp, false);
