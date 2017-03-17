@@ -5,7 +5,7 @@ if(
   ){
     $to = '6granik@gmail.com, grover2006@yandex.ru'; //Почта получателя, через запятую можно указать сколько угодно адресов
     $subject = 'Обратный звонок'; //Загаловок сообщения
-    $email = strip_tags($_POST['name']);
+    $name = strip_tags($_POST['name']);
     $phone = strip_tags($_POST['phone']);
 
     $message = '
@@ -14,7 +14,7 @@ if(
     <title>'.$subject.'</title>
     </head>
     <body>
-    <p>Email: '.$name.'</p>
+    <p>Имя: '.$name.'</p>
     <p>Телефон: '.$phone.'</p>
     </body>
     </html>'; //Текст нащего сообщения можно использовать HTML теги
@@ -24,6 +24,6 @@ if(
 
     mail($to, $subject, $message, $headers); //Отправка письма с помощью функции mail
 
-    echo $email;
+    echo $name;
   }
 ?>
