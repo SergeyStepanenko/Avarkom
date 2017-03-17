@@ -50,6 +50,9 @@
           data: data,
           success: function() {
             // показать окно об успешной отправке и закрыть после
+            body.appendChild(popUpCover);
+            closeButton2 = document.querySelector('.closeButton2');
+            setTimeout(function addEventListener () {closeButton2.addEventListener('click', closePopUp, false)}, 1);
           },
         });
 
@@ -102,14 +105,8 @@
                   </div>\
                 </div>";
 
-        body.appendChild(popUpCover);
-        closeButton2 = document.querySelector('.closeButton2');
-        setTimeout(function addEventListener () {closeButton2.addEventListener('click', closePopUp, false)}, 1);
-      } else {
-        function shakeInputBlock() {
-          //add Effect Here
-        }
-      }
+
+      };
     };
   };
 
